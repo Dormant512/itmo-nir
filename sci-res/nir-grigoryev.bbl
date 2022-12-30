@@ -1,0 +1,42 @@
+\begin{thebibliography}{4}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Egger and Yu(2022)}]{egger2022topic}
+\bibinfo{author}{Egger, R.}, \bibinfo{author}{Yu, J.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{A topic modeling comparison between lda, nmf,
+  top2vec, and bertopic to demystify twitter posts}.
+\newblock \bibinfo{journal}{Frontiers in Sociology} \bibinfo{volume}{7}.
+%Type = Article
+\bibitem[{Grootendorst(2022)}]{grootendorst2022bertopic}
+\bibinfo{author}{Grootendorst, M.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Bertopic: Neural topic modeling with a class-based
+  tf-idf procedure}.
+\newblock \bibinfo{journal}{arXiv preprint arXiv:2203.05794} .
+%Type = Article
+\bibitem[{Huang et~al.(2020)Huang, Meng, Guo, Ji and Han}]{huang2020weakly}
+\bibinfo{author}{Huang, J.}, \bibinfo{author}{Meng, Y.}, \bibinfo{author}{Guo,
+  F.}, \bibinfo{author}{Ji, H.}, \bibinfo{author}{Han, J.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Weakly-supervised aspect-based sentiment analysis via
+  joint aspect-sentiment topic embedding}.
+\newblock \bibinfo{journal}{arXiv preprint arXiv:2010.06705} .
+%Type = Article
+\bibitem[{Onan(2019)}]{onan2019two}
+\bibinfo{author}{Onan, A.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Two-stage topic extraction model for bibliometric
+  data analysis based on word embeddings and clustering}.
+\newblock \bibinfo{journal}{IEEE Access} \bibinfo{volume}{7},
+  \bibinfo{pages}{145614--145633}.
+
+\end{thebibliography}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.4.28)  30 DEC 2022 13:29
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.4.28)  31 DEC 2022 01:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -554,71 +554,74 @@ Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box57
 \rot@mess@toks=\toks21
 )
-LaTeX Font Info:    Trying to load font information for TU+txr on input line 131.
-LaTeX Font Info:    No file TUtxr.fd. on input line 131.
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip68
+\multirow@cntb=\count278
+\multirow@dima=\skip69
+\bigstrutjot=\dimen166
+)
+LaTeX Font Info:    Trying to load font information for TU+txr on input line 132.
+LaTeX Font Info:    No file TUtxr.fd. on input line 132.
 
 
 LaTeX Font Warning: Font shape `TU/txr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 131.
+(Font)              using `TU/lmr/m/n' instead on input line 132.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2022-01-12 L3 backend support: XeTeX
  (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count278
-\l__color_backend_stack_int=\count279
-\g__color_backend_stack_int=\count280
-\g__graphics_track_int=\count281
+\c__kernel_sys_dvipdfmx_version_int=\count279
+\l__color_backend_stack_int=\count280
+\g__color_backend_stack_int=\count281
+\g__graphics_track_int=\count282
 \l__pdf_internal_box=\box58
-\g__pdf_backend_object_int=\count282
-\g__pdf_backend_annotation_int=\count283
-\g__pdf_backend_link_int=\count284
-) (./nir-grigoryev.aux
-
-Package natbib Warning: Citation `' multiply defined.
-
-)
+\g__pdf_backend_object_int=\count283
+\g__pdf_backend_annotation_int=\count284
+\g__pdf_backend_link_int=\count285
+) (./nir-grigoryev.aux)
 \openout1 = `nir-grigoryev.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 131.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 131.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 132.
+LaTeX Font Info:    Trying to load font information for OML+txmi on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 131.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 131.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 132.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 131.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 131.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 131.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 132.
+LaTeX Font Info:    Trying to load font information for OMX+txex on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 131.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 131.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 132.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -663,7 +666,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 131.
+Package hyperref Info: Link coloring ON on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -671,15 +674,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count285
+\c@section@level=\count286
 )
-LaTeX Info: Redefining \ref on input line 131.
-LaTeX Info: Redefining \pageref on input line 131.
-LaTeX Info: Redefining \nameref on input line 131.
+LaTeX Info: Redefining \ref on input line 132.
+LaTeX Info: Redefining \pageref on input line 132.
+LaTeX Info: Redefining \nameref on input line 132.
 
 
 LaTeX Font Warning: Font shape `TU/txr/b/n' undefined
-(Font)              using `TU/txr/m/n' instead on input line 173.
+(Font)              using `TU/txr/m/n' instead on input line 174.
 
 
 LaTeX Font Warning: Font shape `TU/txr/m/it' undefined
@@ -707,32 +710,14 @@ LaTeX Font Info:    Trying to load font information for U+txsyc on input line 19
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Calculating math sizes for size <9.09996> on input line 190.
-
-Underfull \hbox (badness 10000) detected at line 210
-\TU/txr/b/n/10 A 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 211
-\TU/txr/b/n/10 B 
- []
-
-
-Underfull \hbox (badness 10000) detected at line 212
-\TU/txr/b/n/10 C 
- []
-
-
-Underfull \vbox (badness 2426) has occurred while \output is active []
-
 File: elsevier-logo-3p.pdf Graphic file (type pdf)
 <use elsevier-logo-3p.pdf>
-LaTeX Font Info:    Trying to load font information for TU+txss on input line 260.
-LaTeX Font Info:    No file TUtxss.fd. on input line 260.
+LaTeX Font Info:    Trying to load font information for TU+txss on input line 223.
+LaTeX Font Info:    No file TUtxss.fd. on input line 223.
 
 
 LaTeX Font Warning: Font shape `TU/txss/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 260.
+(Font)              using `TU/lmr/m/n' instead on input line 223.
 
 File: SDlogo-3p.pdf Graphic file (type pdf)
 <use SDlogo-3p.pdf>
@@ -758,26 +743,38 @@ Overfull \vbox (45.712pt too high) has occurred while \output is active []
  [1
 
 ]
+File: ./visuals/gr1.pdf Graphic file (type pdf)
+<use ./visuals/gr1.pdf>
+ [2]
+Underfull \hbox (badness 10000) detected at line 261
+[]
+ []
 
-Package natbib Warning: There were multiply defined citations.
 
-[2] (./nir-grigoryev.aux
+Underfull \hbox (badness 10000) detected at line 277
+[]
+ []
 
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
+[3]
+Underfull \vbox (badness 1132) has occurred while \output is active []
 
-)
+ [4] (./nir-grigoryev.bbl
+Underfull \hbox (badness 1014) in paragraph at lines 22--27
+[]\TU/txr/b/n/8 Grootendorst, M., 2022.  Bertopic: Neural topic modeling with a class-based tf-idf procedure.  arXiv preprint
+ []
+
+) [5] (./nir-grigoryev.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 10848 strings out of 476191
- 166560 string characters out of 5812072
- 468981 words of memory out of 5000000
- 31418 multiletter control sequences out of 15000+600000
+ 10947 strings out of 476191
+ 168408 string characters out of 5812072
+ 471781 words of memory out of 5000000
+ 31508 multiletter control sequences out of 15000+600000
  503187 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 70i,14n,76p,373b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,15n,76p,1089b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nir-grigoryev.xdv (2 pages, 35628 bytes).
+Output written on nir-grigoryev.xdv (5 pages, 144304 bytes).
