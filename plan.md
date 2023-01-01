@@ -77,16 +77,92 @@ The authors mentioned several drawbacks of BERTopic models such as them yielding
 
 ## Time series prediction
 
-Прогнозирование временных рядов является одной из важнейших задач, относящихся к временным рядам. Существует множество методов прогнозирования, и наиболее значимые были перечислены в обзорной статье [30]. В ней названы следующие параметрические модели: 
+Time series forecasting is one of the most important tasks related to time-dependent processes. A plethora of methods for predicting time series have been developed and the most practical ones were described in the publication [parmezan2019]. The authors group all methods into two major categories: parametric and non-parametric.
 
-- Модели скользящего среднего MA (moving average), представляющие прогнозируемые значения в виде среднего по некому интервалу до прогноза. 
-- Модели простого экспоненциального сглаживания SES (simple exponential smoothing) – модели, рассматривающие прогнозируемое значение как линейную комбинацию всех значений временного ряда с коэффициентами, экспоненциально растущими от удалённых членов ряда к наиболее недавним. 
-- Модели экспоненциального сглаживания Гольта и Гольта-Винтерса (Holt, Holt-Winters exponential smoothing) – расширение модели SES, учитывающее наличие тренда и высокочастотного шума во временном ряду, соответственно. 
-- ARIMA/SARIMA модели (autoregressive integrated moving average) – авторегрессионные модели, которые могут учитывать или не учитывать сезонные циклические процессы. 
+Among the parametric methods the following were described:
 
-Среди непараметрических методов были названы искусственные нейронные сети, методы опорных векторов и k ближайших соседей. Стоит отметить, что эти методы реже применяются к временным рядам. 
+-  Moving averages models (MA), simple models that view predicted values at a certain timestep as averages over some interval before this step. MA model is defined by the equation:
+  $$
+  z_{t+1} = \frac{\sum\limits_{i=0}^{r-1}z_{t-i}}{r}
+  $$
+  Here, $t$ is the timestep, $z_{t+1}$ is the predicted value and $r$ is the number of observations included in the average. Such models are simple but lack quality, when data has seasonality, trend or high-frequency noise.
 
- Наиболее популярным методом прогнозирования временных рядов стали модели ARIMA. Подробный пример использования данной авторегрессионной модели приведён в статье [31], где авторы прогнозируют статистические показатели для COVID-19. Было показано, что с помощью ARIMA можно добиться реалистичных и адекватных предсказаний временных рядов. 
+-  Simple exponential smoothing models (SES) are conceptually close to MA. The main difference is that all previous timesteps are taken into account with different weights, which exponentially decrease the further away from prediction the timestep is. They are defined by the following equation:
+   $$
+   z_{t+1} = L_t = \sum_{i=0}^{t-1} \alpha (1-\alpha)^i z_{t-i}
+   $$
+   Here $\alpha \in (0,1)$ is the weight for constant smoothing and $L_t$ is the estimate for the next step at time $t$. For ease of computation, recurrent simplification can be formalized:
+   $$
+   L_t = \alpha z_t + (1-\alpha) L_{t-1}
+   $$
+   Initially, it is supposed that $L_1 = z_1$. The main drawback of the method is the difficulty in optimizing $\alpha$ and inaccurate results when dealing with trends.
+
+-  Holt's exponential smoothing (HES) is an extension of SES that utilizes a second smoothing constant $\beta$ for modeling trends. HES models are defined by equations:
+   $$
+   L_t = \alpha z_t + (1-\alpha) (L_{t-1} + T_{t-1}) \\
+   T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1} \\
+   z_{t+h} = L_t + hT_t
+   $$
+   Here, $L$ and $T$ are the level and trend components, accordingly, and $h$ is the prediction horizon (more than 1 step as opposed to SES). Initially, $L_1 = z_1$ and $T_1 = z_2 - z_1$. As in SES method, the most difficult part is the optimization of $\alpha$ and $\beta$ constants.
+
+-  Holt-Winters' seasonal exponential smoothing models (HW) iterate on HES method principles and additionally deal with seasonality by adding another constant $\gamma$. More commonly used additive HW models (AHW) are defined by equations:
+   $$
+   L_t = \alpha (z_t - S_{t-s}) + (1-\alpha) (L_{t-1} + T_{t-1}) \\
+   T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1} \\
+   S_t = \gamma (z_t - L_t) + (1-\gamma) S_{t-s} \\
+   z_{t+h} = L_t + hT_t + S_{t-s+h}
+   $$
+   Here, $S$ is the seasonal component and $s$ denotes the number of timesteps that make a full seasonal cycle. $L$ is usually initialized with:
+   $$
+   L_s = \frac{1}{s} \sum_{i=1}^s z_i
+   $$
+   $T$ with:
+   $$
+   T_s = \frac{1}{s} \sum_{i=1}^s \frac{z_{s+i} - z_i}{s}
+   $$
+   and $S$ indexes are computed:
+   $$
+   S_i = z_i - L_s, \quad i \in [1,s]
+   $$
+
+-  (S)ARIMA, (seasonal) autoregressive integrated moving average models provide even higher quality forecasts for stochastic time series and conceptually include three operations: autoregression AR with parameter $p$, intergration I with parameter $d$ and moving averages MA with parameter $q$. Here, integration refers to taking successive differences from the time series ($\Delta z_t = z_t - z_{t-1}$) so as to make the time series stationary, i.e. with no trend and constant deviation. ARIMA of order $(p,d,q)$ is defined by the equation:
+   $$
+   I'_t = \Delta^d z_t = \delta + \sum_{i=1}^p \varphi_i I'_{t-i} + \sum_{i=1}^q \theta_i e_{t-i} + e_t
+   $$
+   Here, $I'_t$ is the value of the $d$-times differenced stationary time series, $\varphi_i$ are AR parameters with lags up to $p$ and $\theta_i$ are MA parameters with lags up to $q$. Parameter $\delta$ is the initial level of the model and the last term $e_t$ denotes white noise with zero mean and constant deviation. If $d>1$, the constant $\delta$ can be omitted.
+   SARIMA model is an extension of ARIMA that takes in four additional parameters and models seasonality. It is essentially ARIMA $(p,d,q)$ with a seasonal part added. SARIMA of order $(p,d,q)\times (P,D,Q)_s$, where $P$, $D$ and $Q$ are maximum lags of AR, differencing degree and maximum lags of MA of the seasonal component denoted as $I''_t$ below:
+   $$
+   I_t = \underbrace{\delta + \sum_{i=1}^p \varphi_i I'_{t-i} + \sum_{i=1}^q \theta_i e_{t-i} + e_t}_{\mathrm{ARIMA}} + \underbrace{\sum_{i=1}^P \Phi_i I''_{t-is} + \sum_{i=1}^Q \Theta_i e_{t-is}}_{I''_t = \Delta^D z_t}
+   $$
+   As in ARIMA, here $\delta$ can be omitted if $d+D > 1$. (S)ARIMA models are the most commonly used methods of time series forecasting in the modern practice due to algorithm efficiency, ease of use and high quality of predictions on a large range of time series.
+
+In addition, the authors gave a brief description of non-parametric methods for forecasting processes, which include the following:
+
+- Artificial neural networks (ANNs) are models comprised of neurons -- objects capable of taking several inputs, combining them linearly with a certain bias and feeding the output to an activation function (often sigmoid or relu). The output of a single neuron can be described by the equation:
+  $$
+  f(\mathrm{net}) = f\left( \sum_{i=1}^l w_i x_i + b \right)
+  $$
+  Here, $x_i$ and $w_i$ are inputs and weights, $b$ is a bias and $f$ is the activation function. Arranging neurons in several layers (multiple layer perceptron, MLP) was allowed by introducing backpropagation learning algorithms, where the weights are adjusted to better fit the data in reverse layer order.
+  An example usage of multilayer feed-forward neural networks (MLFFNN) is presented in the publication [khosravi2018]. The authors showed that even such simple architecture of ANNs can produce good quality forecasts. The paper contains R-metrics (correlation coefficients between predictions and test data) for a dataset of wind speed time series for MLFFNN with values as high as 0.9995.
+  In addition, the authors suggest adaptive neuro-fuzzy inference system (ANFIS) -- a method that combines ANNs with fuzzy inference system. The latter implies the usage of fuzzy-parameters (if-else rules manually trained by specialists in the research field). According to the results presented in the article, the utilization of such rules slightly improves time series prediction as opposed to MLFFNN.
+  In the networks mentioned above, neuron-to-neuron signals flow only from input to output. This does not apply to recursive neural networks (RNNs), where neurons form a cycle and the signal has several flow directions. In the simple recurrent network (SRN), the state of a chosen layer within a cycle is conditioned by a context layer on its previous state. This creates short-term memory, i.e. the ability of the network to store complex signals.
+  The most advanced RNNs for forecasting time series are the long short-term memory (LSTM) networks. **[ADD SOME INFO FROM liang2018 and hua2019]**
+  They are still less used than parametric methods such as (S)ARIMA as their performance is highly dependent on the amount of available data.
+
+- Support vector machines (SVMs) are algorithms conceptually close to ANNs but minimizing the training error while also minimizing the upper bound on the error when the model is applied to test data. The classical illustration to SVMs is binary classification (FIG ZZZ)
+  [FIG ZZZ from page 16 of parmezan2019]
+  The figure shows a set of hyperplanes dividing the two classes. An SVM seeks the optimal divider, where the highest separation margin (distance from divider to support vectors) is reached.
+  **[ADD FROM khosravi2018]**
+
+- K-nearest neighbors (kNN) are in nature similarity-based classification algorithms. For forecasting $z_{m+1}$ for a time series $Z = (z_1, \cdots, z_m)$ the algorithm uses last $l$ timesteps as query $Q$ and searches for $k$ most similar subsequences to $Q$ by sliding a window of size $l$ along the time series. Then, the values of $S_{l+1}^{(j)}$ are averaged in an ensemble to predict $z_{m+1}$:
+  $$
+  f(S) = \frac{1}{k} \sum_{j=1}^k S_{l+1}^{(j)}
+  $$
+  Such kNN models have shown the capability to model highly complex non-linear patterns, especially in form of time series prediction with invariance kNN (kNN-TSPI). The later algorithm deals with trivial matches, amplitude, offset and complexity invariance.
+
+**[MORE ABOUT HYBRID METHODS FROM rangapuram2018]**
+
+Наиболее популярным методом прогнозирования временных рядов стали модели ARIMA. Подробный пример использования данной авторегрессионной модели приведён в статье [benvenuto2020], где авторы прогнозируют статистические показатели для COVID-19. Было показано, что с помощью ARIMA можно добиться реалистичных и адекватных предсказаний временных рядов. 
 
 ## Prediction with exogenous variables
 
