@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex nir-grigoryev"] 1672440912 "nir-grigoryev.aux" "nir-grigoryev.bbl" "nir-grigoryev" 1672440913
-  "./bibliography-nir.bib" 1672435964 1025 3849aaa6c24ca1af3d5807592c3c331f ""
+["bibtex nir-grigoryev"] 1672703572 "nir-grigoryev.aux" "nir-grigoryev.bbl" "nir-grigoryev" 1672703573
+  "./bibliography-nir.bib" 1672578477 3035 38ebafd8aecfd625b3d48864b6d264d7 ""
   "./elsarticle-harv.bst" 1672440760 29998 df7bf368a8a10b22ec2c9aba729a878c ""
-  "nir-grigoryev.aux" 1672440913 2977 a1fe74df6add4030340dd43b83edff61 "xelatex"
+  "nir-grigoryev.aux" 1672703573 4663 0f75a25e7851403e5fa16de857fa149e "xelatex"
   (generated)
   "nir-grigoryev.bbl"
   "nir-grigoryev.blg"
-["xdvipdfmx"] 1672440913 "nir-grigoryev.xdv" "nir-grigoryev.pdf" "nir-grigoryev" 1672440913
-  "nir-grigoryev.xdv" 1672440913 144304 ce771241788c141e90583a1d7c7ad5cd "xelatex"
+["xdvipdfmx"] 1672703573 "nir-grigoryev.xdv" "nir-grigoryev.pdf" "nir-grigoryev" 1672703573
+  "nir-grigoryev.xdv" 1672703573 301352 245cb419a5c1f3f12091c31279f1a7f0 "xelatex"
   (generated)
   "nir-grigoryev.pdf"
-["xelatex"] 1672440912 "nir-grigoryev.tex" "nir-grigoryev.xdv" "nir-grigoryev" 1672440913
+["xelatex"] 1672703572 "nir-grigoryev.tex" "nir-grigoryev.xdv" "nir-grigoryev" 1672703573
   "/etc/texmf/web2c/texmf.cnf" 1651151373 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -21,6 +21,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/txb.tfm" 1136768653 2452 76194099b4f1c022cb59f4564251c4fe ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/txex.tfm" 1136768653 1080 b674b4ba143004461509a754a0984b67 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/txexa.tfm" 1136768653 688 f56006d6e56f46e63d9f63252958b828 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/txi.tfm" 1136768653 2584 cf4a6a7c2a518d47468fe29ef0913ba0 ""
@@ -104,11 +105,14 @@
   "elsarticle.cls" 1618514452 31795 6274ec587dd53fa5dc7108c2f8ec0881 ""
   "elsevier-logo-3p.pdf" 1618514454 1496269 91f17f8bd6c4ade6422ce8833eadb778 ""
   "framed.sty" 1618514454 22449 7ec15c16d0d66790f28e90343c5434a3 ""
-  "nir-grigoryev.aux" 1672440913 2977 a1fe74df6add4030340dd43b83edff61 "xelatex"
-  "nir-grigoryev.bbl" 1672440912 1972 18526bbd940a9d4b97883c47c2cccaf4 "bibtex nir-grigoryev"
-  "nir-grigoryev.spl" 1672440912 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "nir-grigoryev.tex" 1672440908 22401 ce03490d25afdebf851e96b6588b04cc ""
+  "nir-grigoryev.aux" 1672703573 4663 0f75a25e7851403e5fa16de857fa149e "xelatex"
+  "nir-grigoryev.bbl" 1672703572 4928 29781b6c64132abdfe8aaa4fed8d85ea "bibtex nir-grigoryev"
+  "nir-grigoryev.spl" 1672703573 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "nir-grigoryev.tex" 1672703570 38944 6d60a560b199b7fd172f94888c8c9947 ""
   "visuals/gr1.pdf" 1672431659 140847 89d33b02a5c062954f0b08e7211e4573 ""
+  "visuals/gr2.pdf" 1672701895 29043 5630c6f3ccfc952ac41f69320e94403a ""
+  "visuals/gr3.pdf" 1672702540 122677 6049ac478b4423a71235d80a4364fefc ""
+  "visuals/gr4.pdf" 1672703084 43828 caad9f48135305385509679933e666a6 ""
   (generated)
   "nir-grigoryev.aux"
   "nir-grigoryev.log"

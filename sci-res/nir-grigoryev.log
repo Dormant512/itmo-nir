@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.4.28)  31 DEC 2022 01:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.4.28)  3 JAN 2023 02:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -758,23 +758,37 @@ Underfull \hbox (badness 10000) detected at line 277
 [3]
 Underfull \vbox (badness 1132) has occurred while \output is active []
 
- [4] (./nir-grigoryev.bbl
-Underfull \hbox (badness 1014) in paragraph at lines 22--27
+ [4] [5] [6]
+File: ./visuals/gr2.pdf Graphic file (type pdf)
+<use ./visuals/gr2.pdf>
+File: ./visuals/gr3.pdf Graphic file (type pdf)
+<use ./visuals/gr3.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7] [8]
+File: ./visuals/gr4.pdf Graphic file (type pdf)
+<use ./visuals/gr4.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9] (./nir-grigoryev.bbl
+Underfull \hbox (badness 1014) in paragraph at lines 32--37
 []\TU/txr/b/n/8 Grootendorst, M., 2022.  Bertopic: Neural topic modeling with a class-based tf-idf procedure.  arXiv preprint
  []
 
-) [5] (./nir-grigoryev.aux)
+) [10] (./nir-grigoryev.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 10947 strings out of 476191
- 168408 string characters out of 5812072
- 471781 words of memory out of 5000000
- 31508 multiletter control sequences out of 15000+600000
- 503187 words of font info for 139 fonts, out of 8000000 for 9000
+ 10999 strings out of 476191
+ 169515 string characters out of 5812072
+ 479392 words of memory out of 5000000
+ 31556 multiletter control sequences out of 15000+600000
+ 504954 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 70i,15n,76p,1089b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,15n,76p,1483b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nir-grigoryev.xdv (5 pages, 144304 bytes).
+Output written on nir-grigoryev.xdv (10 pages, 301352 bytes).

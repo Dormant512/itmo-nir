@@ -324,6 +324,128 @@ The authors mentioned several drawbacks of BERTopic models such as them yielding
 
 \subsection{Time series prediction}
 
+Time series forecasting is one of the most important tasks related to time-dependent processes. A plethora of methods for predicting time series have been developed and the most practical ones were described in the publication \cite{parmezan2019evaluation}. The authors group all methods into two major categories: parametric and non-parametric.
+
+Among the parametric methods the following were described:
+\begin{enumerate}
+	\item Moving averages models (MA), simple models that view predicted values at a certain timestep as averages over some interval before this step. MA model is defined by the equation:
+\begin{equation}
+z_{t+1} = \frac{\sum\limits_{i=0}^{r-1}z_{t-i}}{r}
+\end{equation}
+Here, $t$ is the timestep, $z_{t+1}$ is the predicted value and $r$ is the number of observations included in the average. Such models are simple but lack quality, when data has seasonality, trend or high-frequency noise.
+	\item Simple exponential smoothing models (SES) are conceptually close to MA. The main difference is that all previous timesteps are taken into account with different weights, which exponentially decrease the further away from prediction the timestep is. They are defined by the following equation:
+\begin{equation}
+z_{t+1} = L_t = \sum_{i=0}^{t-1} \alpha (1-\alpha)^i z_{t-i}
+\end{equation}
+Here $\alpha \in (0,1)$ is the weight for constant smoothing and $L_t$ is the estimate for the next step at time $t$. For ease of computation, recurrent simplification can be formalized:
+\begin{equation}
+L_t = \alpha z_t + (1-\alpha) L_{t-1}
+\end{equation}
+Initially, it is supposed that $L_1 = z_1$. The main drawback of the method is the difficulty in optimizing $\alpha$ and inaccurate results when dealing with trends.
+	\item Holt's exponential smoothing (HES) is an extension of SES that utilizes a second smoothing constant $\beta$ for modeling trends. HES models are defined by equations:
+\begin{equation}
+L_t = \alpha z_t + (1-\alpha) (L_{t-1} + T_{t-1})
+\end{equation}
+\begin{equation}
+T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}
+\end{equation}
+\begin{equation}
+z_{t+h} = L_t + hT_t
+\end{equation}
+Here, $L$ and $T$ are the level and trend components, accordingly, and $h$ is the prediction horizon (more than 1 step as opposed to SES). Initially, $L_1 = z_1$ and $T_1 = z_2 - z_1$. As in SES method, the most difficult part is the optimization of $\alpha$ and $\beta$ constants.
+	\item Holt-Winters' seasonal exponential smoothing models (HW) iterate on HES method principles and additionally deal with seasonality by adding another constant $\gamma$. More commonly used additive HW models (AHW) are defined by equations:
+\begin{equation}
+L_t = \alpha (z_t - S_{t-s}) + (1-\alpha) (L_{t-1} + T_{t-1})
+\end{equation}
+\begin{equation}
+T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}
+\end{equation}
+\begin{equation}
+S_t = \gamma (z_t - L_t) + (1-\gamma) S_{t-s}
+\end{equation}
+\begin{equation}
+z_{t+h} = L_t + hT_t + S_{t-s+h}
+\end{equation}
+Here, $S$ is the seasonal component and $s$ denotes the number of timesteps that make a full seasonal cycle. $L$ is usually initialized with:
+\begin{equation}
+L_s = \frac{1}{s} \sum_{i=1}^s z_i
+\end{equation}
+$T$ with:
+\begin{equation}
+T_s = \frac{1}{s} \sum_{i=1}^s \frac{z_{s+i} - z_i}{s}
+\end{equation}
+and $S$ indexes are computed:
+\begin{equation}
+S_i = z_i - L_s, \quad i \in [1,s]
+\end{equation}
+	\item (S)ARIMA, (seasonal) autoregressive integrated moving average models provide even higher quality forecasts for stochastic time series and conceptually include three operations: autoregression AR with parameter $p$, intergration I with parameter $d$ and moving averages MA with parameter $q$. Here, integration refers to taking successive differences from the time series ($\Delta z_t = z_t - z_{t-1}$) so as to make the time series stationary, i.e. with no trend and constant deviation. ARIMA of order $(p,d,q)$ is defined by the equation:
+\begin{equation}
+I'_t = \Delta^d z_t = \delta + \sum_{i=1}^p \varphi_i I'_{t-i} + \sum_{i=1}^q \theta_i e_{t-i} + e_t
+\end{equation}
+Here, $I'_t$ is the value of the $d$-times differenced stationary time series, $\varphi_i$ are AR parameters with lags up to $p$ and $\theta_i$ are MA parameters with lags up to $q$. Parameter $\delta$ is the initial level of the model and the last term $e_t$ denotes white noise with zero mean and constant deviation. If $d>1$, the constant $\delta$ can be omitted.
+SARIMA model is an extension of ARIMA that takes in four additional parameters and models seasonality. It is essentially ARIMA $(p,d,q)$ with a seasonal part added. SARIMA of order $(p,d,q)\times (P,D,Q)_s$, where $P$, $D$ and $Q$ are maximum lags of AR, differencing degree and maximum lags of MA of the seasonal component denoted as $I''_t$ below:
+\begin{equation}
+I_t = \underbrace{\delta + \sum_{i=1}^p \varphi_i I'_{t-i} + \sum_{i=1}^q \theta_i e_{t-i} + e_t}_{\mathrm{ARIMA}} + \underbrace{\sum_{i=1}^P \Phi_i I''_{t-is} + \sum_{i=1}^Q \Theta_i e_{t-is}}_{I''_t = \Delta^D z_t}
+\end{equation}
+As in ARIMA, here $\delta$ can be omitted if $d+D > 1$. (S)ARIMA models are the most commonly used methods of time series forecasting in the modern practice due to algorithm efficiency, ease of use and high quality of predictions on a large range of time series.
+A detailed usage example of ARIMA on the COVID-19 epidemic dataset is presented in the publication \cite{benvenuto2020application}. In the article, as ARIMA is a widely-used model utilized for time series forecasting, no testing of the model was presented. The authors predicted values for the differenced COVID-19 dataset and provided confidence intervals for the forecast. This, as well as the autocorrelation analysis before model fitting gives insight into the real-world usage of ARIMA models on actual data, which provides estimations for the future. 
+\end{enumerate}
+
+In addition, the authors gave a brief description of non-parametric methods for forecasting processes, which include the following:
+\begin{enumerate}
+	\item Artificial neural networks (ANNs) are models comprised of neurons -- objects capable of taking several inputs, combining them linearly with a certain bias and feeding the output to an activation function (often sigmoid or relu). The output of a single neuron can be described by the equation:
+\begin{equation}
+f(\mathrm{net}) = f\left( \sum_{i=1}^l w_i x_i + b \right)
+\end{equation}
+Here, $x_i$ and $w_i$ are inputs and weights, $b$ is a bias and $f$ is the activation function. Arranging neurons in several layers (multiple layer perceptron, MLP) was allowed by introducing backpropagation learning algorithms, where the weights are adjusted to better fit the data in reverse layer order.
+An example usage of multilayer feed-forward neural networks (MLFFNN) is presented in the publication \cite{khosravi2018time}. The authors showed that even such simple architecture of ANNs can produce good quality forecasts. The paper contains R-metrics (correlation coefficients between predictions and test data) for a dataset of wind speed time series for MLFFNN with values as high as 0.9995.
+In addition, the authors suggest adaptive neuro-fuzzy inference system (ANFIS) -- a method that combines ANNs with fuzzy inference system. The latter implies the usage of fuzzy-parameters (if-else rules manually trained by specialists in the research field). According to the results presented in the article, the utilization of such rules slightly improves time series prediction as opposed to MLFFNN.
+In the networks mentioned above, neuron-to-neuron signals flow only from input to output. This does not apply to recursive neural networks (RNNs), where neurons form a cycle and the signal has several flow directions. In the simple recurrent network (SRN), the state of a chosen layer within a cycle is conditioned by a context layer on its previous state. This creates short-term memory, i.e. the ability of the network to store complex signals.
+The most advanced RNNs for forecasting time series are the long short-term memory (LSTM) networks. LSTMs are described by the authors of the publication \cite{hua2019deep} as essentially RNNs tuned for learning long-term dependencies via components called "memory blocks". The latter are recurrent subnets comprised of memory cells and gates. Memory cells' role is to remember the current state of the network and the gates are in charge of controlling the flow of signal in the network. By their role, gates are classified as input (control the amount of new input data that flows into the network), output (the amount of information that flows out of the memory block) and forget gates (decide the amount of information that remains in the current cell). The layout of a memory block is presented in figure \ref{fig:gr2} (\cite{hua2019deep}).
+\begin{figure}[t]\vspace*{4pt}
+%\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
+	\centerline{\includegraphics[width=0.75\textwidth]{./visuals/gr2.pdf}}
+\caption{An illustration of LSTM memory block.}
+\label{fig:gr2}
+\end{figure}
+It is first decided, which old information stays in the cell, then new information is chosen to be stored. Updating of the cell state is performed by multiplying the old memory state by the forget gate output. Then the element-wise product of the input gate and the candidate values for the new information is added. This procedure lets LSTMs predict time-series with long-term dependencies. Several architectures of LSTM models exist that differ by how the neurons in each memory block are connected. As opposed to fully-connected neurons in the traditional LSTM, they are randomly connected in randomly connected LSTMs (RCLSTM), proposed by the authors of the paper \cite{hua2019deep}. This architecture more closely resembles real synapses in the human brain, which was one of the reasons for the proposal. The authors tested RCLSTM on several datasets including a dataset of traffic information. The influence of the percentage of connected neurons on the predictive quality was estimated my comparison of RMSE metrics. RCLSTM took less computational resources than standard LSTM, however seemed to be outperformed by it. Taking the above into account, RCLSTM still showed better predictions than commonly used methods such as SVR (support vector machines), ARIMA and FFNN (feed-forward neural networks). This implies that random connection of neurons within LSTMs lets significantly reduce computing time while slightly compromising quality.
+Even more structurally complicated versions of LSTMs exist. The authors of \cite{liang2018geoman} suggested GeoMAN ("multi-level attention network to predict the the readings of a geo-sensor..."), that is tuned for spatio-temporal correlations. In the paper the authors test this network on a set of geosensors, each providing time-dependent signals (time series). The network utilizes the multi-level attention mechanism including local and global spatial attention as well as temporal attention. This lets the network extract both correlations between different geosensors and also within one time series. Additionally, the authors implemented external factor fusion module, a mechanism of including exogenous variables from different domains for better predictions. The actual architecture of the GeoMAN model is depicted in the figure \ref{fig:gr3} (\cite{liang2018geoman}).
+\begin{figure}[h!]\vspace*{4pt}
+%\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
+	\centerline{\includegraphics[width=0.7\textwidth]{./visuals/gr3.pdf}}
+\caption{The framework of GeoMAN.}
+\label{fig:gr3}
+\end{figure}
+
+It can be essentially broken down to two LSTM models, one acting as an encoder for spatial attention and the other as a decoder for temporal. The model was tested on spatio-temporal datasets of water and air quality and within the experiment it was also compared to nine commonly used baseline models including ARIMA, VAR (vector auto-regressive) and many variations of RNNs. According to the publication, on spatio-temporal data GeoMAN outperforms all baseline models, both parametric and non-parametric, judging by RMSE values. Thus, the paper \cite{liang2018geoman} proves that RNN models can be effectively engineered to perform well on spatio-temporal data.
+\item Support vector machines (SVMs) are algorithms conceptually close to ANNs but minimizing the training error while also minimizing the upper bound on the error when the model is applied to test data. The classical illustration to SVMs, binary classification, is presented in figure \ref{fig:gr4} (\cite{parmezan2019evaluation}).
+\begin{figure}[h!]\vspace*{4pt}
+%\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
+	\centerline{\includegraphics[width=0.65\textwidth]{./visuals/gr4.pdf}}
+\caption{Binary classification using support vector machines.}
+\label{fig:gr4}
+\end{figure}
+
+The figure shows a set of hyperplanes dividing the two classes. An SVM seeks the optimal divider, where the highest separation margin (distance from divider to support vectors) is reached.
+As a part of a broader research, SVMs are used along other models in the publication \cite{khosravi2018time} for predicting wind speeds. It showed highly accurate predictions with $R$-statistics of up to $0.9938$, which is accurate, albeit less accurate than the other methods that comprised the research in \cite{khosravi2018time}. 
+	\item $k$-nearest neighbors ($k$NN) are in nature similarity-based classification algorithms. For forecasting $z_{m+1}$ for a time series $Z = (z_1, \cdots, z_m)$ the algorithm uses last $l$ timesteps as query $Q$ and searches for $k$ most similar subsequences to $Q$ by sliding a window of size $l$ along the time series. Then, the values of $S_{l+1}^{(j)}$ are averaged in an ensemble to predict $z_{m+1}$:
+\begin{equation}
+f(S) = \frac{1}{k} \sum_{j=1}^k S_{l+1}^{(j)}
+\end{equation}
+Such $k$NN models have shown the capability to model highly complex non-linear patterns, especially in form of time series prediction with invariance $k$NN ($k$NN-TSPI). The later algorithm deals with trivial matches, amplitude, offset and complexity invariance.
+\item The authors of the publication \cite{rangapuram2018deep} offered a hybrid method that combined state space models (SSMs) with deep neural networks. Principally, SSMs utilize a latent space that is used to encode time series' features: level, trend and seasonality. Linear SSMs are described by the equation:
+\begin{equation}
+\mathbf{l}_t = \mathbf{F}_t\mathbf{l}_{t-1} + \mathbf{g}_t \varepsilon_t, \quad \varepsilon_t \sim \mathcal{N} (0,1)
+\end{equation}
+Here, $\mathbf{l}_t$ is the state of the latent space at timestep $t$, $\mathbf{F}_t$ is a deterministic transition matrix and $\mathbf{g}_t \varepsilon_t$ is a random innovation. The predicted value is defined by the equation:
+\begin{equation}
+z_t = \mathbf{a}_t^\top \mathbf{l}_{t-1} + b_t + \sigma_t \varepsilon_t, \quad \varepsilon_t \sim \mathcal{N} (0,1)
+\end{equation}
+Here, $\mathbf{a}^\top \in \mathbb{R}^L$, $\sigma_t \in\mathbb{R}^{>0}$ and $b_t \in \mathbb{R}$ are time-varying parameters of the model.
+SSMs in general are optimized for applications where the time series are structured and this structure is well-known. The major drawback of SSMs is that multivariate analysis of several correlated time series is impossible as the model if fitted onto one process at a time. In the publication, a hybrid model is proposed, that takes advantage of the benefits of both SSMs and RNNs. The model is comprised of an RNN that is used to parametrize a particular linear SSM. RNN's parameters are learned simultaneously from the whole dataset with all additional covariates, which lets the extraction of shared patterns.
+This "orchestration" of several SSMs with an RNN is a complicated model architecture, which was quantitatively tested by the authors of the paper \cite{rangapuram2018deep} against more conventional baseline models such as ARIMA and DeepAR, an RNN-based method. The models were used to forecast electricity consumption and traffic occupancy rates. They were compared by the values of standard $p50$ and $p90$ quantile loss metrics. On the one hand, the majority of the tests with forecasting long-term horizons showed that the proposed hybrid method slightly outperformed the others. On the other hand, DeepAR -- RNN -- performed better at predicting a short forecast horizon.
+\end{enumerate}
+
 \subsection{Prediction with exogenous variables}
 
 \subsection{Impact of context information on consumption}

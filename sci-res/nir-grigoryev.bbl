@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -12,6 +12,16 @@
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
 %Type = Article
+\bibitem[{Benvenuto et~al.(2020)Benvenuto, Giovanetti, Vassallo, Angeletti and
+  Ciccozzi}]{benvenuto2020application}
+\bibinfo{author}{Benvenuto, D.}, \bibinfo{author}{Giovanetti, M.},
+  \bibinfo{author}{Vassallo, L.}, \bibinfo{author}{Angeletti, S.},
+  \bibinfo{author}{Ciccozzi, M.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Application of the arima model on the covid-2019
+  epidemic dataset}.
+\newblock \bibinfo{journal}{Data in brief} \bibinfo{volume}{29},
+  \bibinfo{pages}{105340}.
+%Type = Article
 \bibitem[{Egger and Yu(2022)}]{egger2022topic}
 \bibinfo{author}{Egger, R.}, \bibinfo{author}{Yu, J.}, \bibinfo{year}{2022}.
 \newblock \bibinfo{title}{A topic modeling comparison between lda, nmf,
@@ -24,6 +34,15 @@
   tf-idf procedure}.
 \newblock \bibinfo{journal}{arXiv preprint arXiv:2203.05794} .
 %Type = Article
+\bibitem[{Hua et~al.(2019)Hua, Zhao, Li, Chen, Liu and Zhang}]{hua2019deep}
+\bibinfo{author}{Hua, Y.}, \bibinfo{author}{Zhao, Z.}, \bibinfo{author}{Li,
+  R.}, \bibinfo{author}{Chen, X.}, \bibinfo{author}{Liu, Z.},
+  \bibinfo{author}{Zhang, H.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Deep learning with long short-term memory for time
+  series prediction}.
+\newblock \bibinfo{journal}{IEEE Communications Magazine} \bibinfo{volume}{57},
+  \bibinfo{pages}{114--119}.
+%Type = Article
 \bibitem[{Huang et~al.(2020)Huang, Meng, Guo, Ji and Han}]{huang2020weakly}
 \bibinfo{author}{Huang, J.}, \bibinfo{author}{Meng, Y.}, \bibinfo{author}{Guo,
   F.}, \bibinfo{author}{Ji, H.}, \bibinfo{author}{Han, J.},
@@ -32,11 +51,47 @@
   joint aspect-sentiment topic embedding}.
 \newblock \bibinfo{journal}{arXiv preprint arXiv:2010.06705} .
 %Type = Article
+\bibitem[{Khosravi et~al.(2018)Khosravi, Machado and Nunes}]{khosravi2018time}
+\bibinfo{author}{Khosravi, A.}, \bibinfo{author}{Machado, L.},
+  \bibinfo{author}{Nunes, R.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Time-series prediction of wind speed using machine
+  learning algorithms: A case study osorio wind farm, brazil}.
+\newblock \bibinfo{journal}{Applied Energy} \bibinfo{volume}{224},
+  \bibinfo{pages}{550--566}.
+%Type = Inproceedings
+\bibitem[{Liang et~al.(2018)Liang, Ke, Zhang, Yi and Zheng}]{liang2018geoman}
+\bibinfo{author}{Liang, Y.}, \bibinfo{author}{Ke, S.}, \bibinfo{author}{Zhang,
+  J.}, \bibinfo{author}{Yi, X.}, \bibinfo{author}{Zheng, Y.},
+  \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Geoman: Multi-level attention networks for
+  geo-sensory time series prediction.}, in: \bibinfo{booktitle}{IJCAI}, pp.
+  \bibinfo{pages}{3428--3434}.
+%Type = Article
 \bibitem[{Onan(2019)}]{onan2019two}
 \bibinfo{author}{Onan, A.}, \bibinfo{year}{2019}.
 \newblock \bibinfo{title}{Two-stage topic extraction model for bibliometric
   data analysis based on word embeddings and clustering}.
 \newblock \bibinfo{journal}{IEEE Access} \bibinfo{volume}{7},
   \bibinfo{pages}{145614--145633}.
+%Type = Article
+\bibitem[{Parmezan et~al.(2019)Parmezan, Souza and
+  Batista}]{parmezan2019evaluation}
+\bibinfo{author}{Parmezan, A.R.S.}, \bibinfo{author}{Souza, V.M.},
+  \bibinfo{author}{Batista, G.E.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Evaluation of statistical and machine learning models
+  for time series prediction: Identifying the state-of-the-art and the best
+  conditions for the use of each model}.
+\newblock \bibinfo{journal}{Information sciences} \bibinfo{volume}{484},
+  \bibinfo{pages}{302--337}.
+%Type = Article
+\bibitem[{Rangapuram et~al.(2018)Rangapuram, Seeger, Gasthaus, Stella, Wang and
+  Januschowski}]{rangapuram2018deep}
+\bibinfo{author}{Rangapuram, S.S.}, \bibinfo{author}{Seeger, M.W.},
+  \bibinfo{author}{Gasthaus, J.}, \bibinfo{author}{Stella, L.},
+  \bibinfo{author}{Wang, Y.}, \bibinfo{author}{Januschowski, T.},
+  \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Deep state space models for time series forecasting}.
+\newblock \bibinfo{journal}{Advances in neural information processing systems}
+  \bibinfo{volume}{31}.
 
 \end{thebibliography}
