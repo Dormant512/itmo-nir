@@ -42,14 +42,7 @@
       linkcolor=blue,
       citecolor=blue,
       urlcolor=blue}
-%\usepackage{amsmath}
-
-
-%% The ecrc package defines commands needed for running heads and logos.
-%% For running heads, you can set the journal name, the volume, the starting page and the authors
-
-%% set the volume if you know. Otherwise `00'
-\volume{00}
+\usepackage{amsmath}
 
 %% set the starting page if not 1
 \firstpage{1}
@@ -214,7 +207,12 @@ Machine Learning ; Natural Language Processing ; Topic Analysis ; Autoregressive
 
 \section{Related work}
 
-\subsection{Topic analysis}
+
+\setlength{\belowdisplayskip}{12pt} \setlength{\belowdisplayshortskip}{7pt}
+\setlength{\abovedisplayskip}{12pt} \setlength{\abovedisplayshortskip}{7pt}
+
+
+\subsection{Topic analysis} \label{ta}
 
 The main goal of this part of literature review is the choice of topic analysis methods to be used in this research work for processing news headlines. Thus, the most acknowledged methods ranging from classic LDA to modern BERTopic are looked upon in this section.
 
@@ -242,14 +240,14 @@ Here $a$ denotes the number of pairs of instances which are grouped in the same 
 
 According to the results presented in the article and in figure \ref{fig:gr1} (\cite{onan2019two}), among single method clustering strategies, LDA (latent Dirichlet allocation) outperformed other algorithms, with DIANA taking the second place. Results of clustering seemed to have improved significantly when integrating LDA2vec embedding scheme with clustering algorithms.
 
+Even better results were shown by the proposed clustering ensemble framework which utilizes IVC for combining the mentioned methods. Thus, such proposed ensemble approach can lead to better topic analysis models.
+
 \begin{figure}[t]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
-	\centerline{\includegraphics[width=0.85\textwidth]{./visuals/gr1.pdf}}
+	\centerline{\includegraphics[width=0.75\textwidth]{./visuals/gr1.pdf}}
 \caption{Jaccard Coefficient metric for different combinations of embedding and clustering methods.}
 \label{fig:gr1}
 \end{figure}
-
-Even better results were shown by the proposed clustering ensemble framework which utilizes IVC for combining the mentioned methods. Thus, such proposed ensemble approach can lead to better topic analysis models.
 
 As opposed to the example presented above, topic analysis can solve not only the problem of extracting broad semantic themes from texts but also some more nuanced information. Authors of the article \cite{huang2020weakly} propose their two-step approach for aspect-based sentiment analysis. Their procedure lets evaluate reviews in terms of how positive or negative they are and also define aspects of the review object which are evaluated. In the publication, restaurant and laptop reviews were used as input data. The proposed model outputs a tuple in form of (sentiment, aspect). For example, a review of a restaurant could output (good, ambiance) or (bad, food).
 
@@ -322,7 +320,7 @@ Human interpretation of the extracted topics has shown that BERTopic and NMF per
 
 The authors mentioned several drawbacks of BERTopic models such as them yielding large numbers of clusters which leads to the need in manual topic processing. Another mentioned disadvantage is that one document could potentially be assigned to just one topic, which often does not reflect reality. In spite of this, BERTopic still can be characterized as one of the most successful and universally applicable methods of topic analysis due to high model quality and efficiency. Thus, BERTopic was the topic analysis method of choice in the current research work.
 
-\subsection{Time series prediction}
+\subsection{Time series prediction} \label{tsp}
 
 Time series forecasting is one of the most important tasks related to time-dependent processes. A plethora of methods for predicting time series have been developed and the most practical ones were described in the publication \cite{parmezan2019evaluation}. The authors group all methods into two major categories: parametric and non-parametric.
 
@@ -443,12 +441,73 @@ z_t = \mathbf{a}_t^\top \mathbf{l}_{t-1} + b_t + \sigma_t \varepsilon_t, \quad \
 \end{equation}
 Here, $\mathbf{a}^\top \in \mathbb{R}^L$, $\sigma_t \in\mathbb{R}^{>0}$ and $b_t \in \mathbb{R}$ are time-varying parameters of the model.
 SSMs in general are optimized for applications where the time series are structured and this structure is well-known. The major drawback of SSMs is that multivariate analysis of several correlated time series is impossible as the model if fitted onto one process at a time. In the publication, a hybrid model is proposed, that takes advantage of the benefits of both SSMs and RNNs. The model is comprised of an RNN that is used to parametrize a particular linear SSM. RNN's parameters are learned simultaneously from the whole dataset with all additional covariates, which lets the extraction of shared patterns.
+
 This "orchestration" of several SSMs with an RNN is a complicated model architecture, which was quantitatively tested by the authors of the paper \cite{rangapuram2018deep} against more conventional baseline models such as ARIMA and DeepAR, an RNN-based method. The models were used to forecast electricity consumption and traffic occupancy rates. They were compared by the values of standard $p50$ and $p90$ quantile loss metrics. On the one hand, the majority of the tests with forecasting long-term horizons showed that the proposed hybrid method slightly outperformed the others. On the other hand, DeepAR -- RNN -- performed better at predicting a short forecast horizon.
 \end{enumerate}
 
-\subsection{Prediction with exogenous variables}
+\subsection{Prediction with exogenous variables} \label{pwev}
 
-\subsection{Impact of context information on consumption}
+According to \cite{smelser2001international}, "the variables that show differences we wish to explain are called endogenous, while the variables used to explain the differences are  called exogenous". If a hypothesis exists, that the observed changes in any variable (called endogenous) are caused by changes in some other variables, the latter are referred to as exogenous.
+
+Victor Gijsbers, the author of the publication \cite{gijsbers2021perceiving}, elaborates on the concept of causality and it being perceived. According to the paper and despite the arguments againt the Humean regularity theory that views any perception of a cause-effect pair as universal, experiencing causation leaves open the possibility that either the causality itself or its experience depend on some external events. This implies, that at least for statistical data on human behavior, which cannot be considered strongly local, the perception of causality ($a^* \to b^*$) can theoretically be generalized to ($A \to B$). Here, $a^*$ and $b^*$ denote specific local observations of random variables $A$ and $B$, while the arrow depicts causality.
+
+Thus, if the chosen exogenous variables either cause the changes in the predicted variables or have an indirect impact on them, the usage of such variables in a forecasting model can increase its performance. An example of such increase is presented in the publication \cite{verma2022arima}. The authors tested ARIMA and ARIMAX, the latter being the same autoregressive model but capable of including exogenous context, in the task of sugarcane yield forecasting in Haryana, India. According to the article, ARIMAX, utilizing exogenous weather data for fitting the model, showed consistently better results than the baseline ARIMA. The values of RMSE, used to compare the models, are given in table \ref{tab:t3} (\cite{verma2022arima}).
+
+\begin{table}[h]
+\caption{Comparative view in terms of RMSEs of sugarcane yield forecasts based on ARIMA and ARIMAX models.}
+\label{tab:t3}
+\begin{tabular*}{\hsize}{@{\extracolsep{\fill}}lll@{}}
+\toprule
+\multirow{2}{*}{District} & \multicolumn{2}{c}{RMSE} \\
+ & ARIMA & ARIMAX \\
+\colrule
+Karnal & 7.44 & 4.18 \\
+Ambala & 6.07 & 4.30 \\
+Kurukshetra & 9.32 & 6.62 \\
+\botrule
+\end{tabular*}
+\end{table}
+
+ARIMAX is one of the most widely used models for forecasting with exogenous context, however, many of the methods described in subsection \ref{tsp} allow for the usage of such variables. The authors of the article \cite{da2020forecasting}, however did not compare models with exogenous variables to those without them, utilized context information for all of their forecasts across five methods in two variations. This includes:
+\begin{enumerate}
+	\item BRNN -- bidirectional recurrent neural networks are RNNs that allow both positive and negative time directions. This lets future information (such as future values of exogenous variables) to be included at a certain time frame.
+	\item CUBIST is rule-based forecasting algorithm that establishes regression models with certain rules based on the input data. General linear regression was used in the paper \cite{da2020forecasting}. Despite the non-linear nature of some time series, implementation of the rules mentioned above lets CUBIST fit complicated temporal patterns.
+	\item $k$NN -- $k$-nearest neighbors method described in subsection \ref{tsp} allows for exogenous variables without major modifications as the latter can be used in the $Q$-queries alongside predicted variables.
+	\item QRF -- quantile random forest is an extension of the random forest (RF) ensemble learning model. In the QRF algorithm, conditional quantiles are utilized. In contrast to conventional RF models, QRF uses full conditional distribution of the predicted variables instead of just the mean.
+	\item SVR -- support vector regression also described in \ref{tsp} similarly to $k$NN is capable of taking in exogenous variables as-is.
+\end{enumerate}
+All of the models were used both with and without data preprocessing via variational mode decomposition (VMD). It decomposes a time series into a certain number of mode functions with different sparsities.
+
+The authors of the paper \cite{da2020forecasting} tested the mentioned models against each other in the task of predicting COVID-19 cases in Brazil and USA. Climatic data was used as exogenous variables. According to the results presented in the article, the best predictions for each state in both countries had low values of RRMSE (no more than 6.29\% but generally between 1 and 3\%). This implies high predictive qualities of models fit with help of exogenous variables, even on large forecast horizons.
+
+Many more variations of autoregressive models that have the capability of including exogenous variables exist. For example, the author of the Master's thesis \cite{ding2021empirical} utilized VARX (vector autoregression with exogenous variables) for predicting stocks and CDS. VARX is an extesion of VAR (vector autoregression) which is closely related to ARIMA. The major benefit of VAR over ARIMA is the capability of multivariate analysis with cross-correlations between different variables. Below, an example equation for VARX with two variables is presented.
+\begin{equation}
+\begin{pmatrix}\Delta x_t \\ \Delta y_t \end{pmatrix}
+= \begin{pmatrix}\alpha_0 \\ \beta_0 \end{pmatrix}
++ \begin{pmatrix}\sum_{i=1}^p \alpha_{1,i} & \sum_{i=1}^p \alpha_{2,i} \\ \sum_{i=1}^p \beta_{1,i} & \sum_{i=1}^p \beta_{2,i} \end{pmatrix}
+\begin{pmatrix}\Delta x_{t-1} \\ \Delta y_{t-1} \end{pmatrix}
++ \begin{pmatrix}\alpha_3 & \alpha_4 \\ \beta_3 & \beta_4 \end{pmatrix}
+\begin{pmatrix}\Delta z_{1, t-1} \\ \Delta z_{2, t-1} \end{pmatrix}
++ \begin{pmatrix}\epsilon_t \\ \varepsilon_t \end{pmatrix}
+\end{equation}
+Here, $x$ and $y$ are endogenous variables, $z_1$ and $z_2$ -- exogenous. Coefficients $\alpha_1$ and $\beta_2$ refer to autoregressive coefficients of $x$ and $y$, accordingly, while $\alpha_2$ and $\beta_1$ are cross-coefficients. The last term in the equation is white noise of the corresponding dimension.
+
+The author used VARX model in the task of predicting CDS and stock prices on the Norwegian market using bond yield and NOK/EUR currency exchange rate (their once-differenced time series) as exogenous variables. According to the thesis, a causal bond between the endogenous variables was found in the way that using exogenous context alongside stock prices as predictors lets accurately forecast CDS, however the opposite is not true. Thus, VARX is a valid method for predicting time series when cross-correlatioins between endogenous variables coexists with important exogenous context. 
+
+Another example of an autoregressive model utilizing exogenous variables is brought up in the publication \cite{li2022nonlinear}. The authors used nonlinear autoregressive (NARX) model which is a modification of simple AR that allowes for:
+\begin{enumerate}
+	\item exogenous variables;
+	\item nonlinearity in time series patterns.
+\end{enumerate}
+The model is defined by the equation below:
+\begin{equation}
+y_t = f(y_{t-i}, x_{k, t-j}), \qquad \begin{matrix}i \in [1, m] \\ j \in [1, n] \\ k \in [1, n] \end{matrix}
+\end{equation}
+Here, $y$ is endogenous, $x_k$ is exogenous and $f(\cdots)$ is a nonlinear function. The authors of the paper used a focused time-delay neural network (FTDNN) for $f$. The network itself has a complex series-parallel architecture, where the structure of the network changes as the training goes on. According to the article, FTDNN has several advantages over conventionally used RNN including extended capabilities of dealing with short sequence lengths and feature sizes.
+
+The authors tested this NARX model for forecasting traffic flow in the selected portion of a street in the city of Guilin. The model performed reasonably well with $R$ metrics around $0.96$ and showed even better predictions after one differencing of the time series. In comparison to more conventional methods, NARX without differencing showed performance better than Holt-Winters method but worse than SARIMA. NARX with one differencing, however, outperformed both models with the $R^2$ metric reaching the value of $0.957$.
+
+\subsection{Impact of context information on consumption} \label{icic}
 
 \section{Conclusion}
 

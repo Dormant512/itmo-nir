@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.4.28)  3 JAN 2023 02:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.4.28)  5 JAN 2023 00:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -324,11 +324,64 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip65
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 44.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip66
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen166
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen167
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count277
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count278
+\leftroot@=\count279
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count280
+\DOTSCASE@=\count281
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box57
+\strutbox@=\box58
+\big@size=\dimen168
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count282
+\c@MaxMatrixCols=\count283
+\dotsspace@=\muskip17
+\c@parentequation=\count284
+\dspbrk@lvl=\count285
+\tag@help=\toks21
+\row@=\count286
+\column@=\count287
+\maxfields@=\count288
+\andhelp@=\toks22
+\eqnshift@=\dimen169
+\alignsep@=\dimen170
+\tagshift@=\dimen171
+\tagwidth@=\dimen172
+\totwidth@=\dimen173
+\lineht@=\dimen174
+\@envbody=\toks23
+\multlinegap=\skip67
+\multlinetaggap=\skip68
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks20
 LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 59.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
 (Font)                  U/txsya/m/n --> U/msa/m/n on input line 59.
@@ -548,80 +601,79 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
  (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count277
-\rotFPtop=\skip66
-\rotFPbot=\skip67
-\rot@float@box=\box57
-\rot@mess@toks=\toks21
-)
-(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\c@r@tfl@t=\count289
+\rotFPtop=\skip69
+\rotFPbot=\skip70
+\rot@float@box=\box59
+\rot@mess@toks=\toks25
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip68
-\multirow@cntb=\count278
-\multirow@dima=\skip69
-\bigstrutjot=\dimen166
+\multirow@colwidth=\skip71
+\multirow@cntb=\count290
+\multirow@dima=\skip72
+\bigstrutjot=\dimen175
 )
-LaTeX Font Info:    Trying to load font information for TU+txr on input line 132.
-LaTeX Font Info:    No file TUtxr.fd. on input line 132.
+LaTeX Font Info:    Trying to load font information for TU+txr on input line 125.
+LaTeX Font Info:    No file TUtxr.fd. on input line 125.
 
 
 LaTeX Font Warning: Font shape `TU/txr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 132.
+(Font)              using `TU/lmr/m/n' instead on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2022-01-12 L3 backend support: XeTeX
  (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count279
-\l__color_backend_stack_int=\count280
-\g__color_backend_stack_int=\count281
-\g__graphics_track_int=\count282
-\l__pdf_internal_box=\box58
-\g__pdf_backend_object_int=\count283
-\g__pdf_backend_annotation_int=\count284
-\g__pdf_backend_link_int=\count285
+\c__kernel_sys_dvipdfmx_version_int=\count291
+\l__color_backend_stack_int=\count292
+\g__color_backend_stack_int=\count293
+\g__graphics_track_int=\count294
+\l__pdf_internal_box=\box60
+\g__pdf_backend_object_int=\count295
+\g__pdf_backend_annotation_int=\count296
+\g__pdf_backend_link_int=\count297
 ) (./nir-grigoryev.aux)
 \openout1 = `nir-grigoryev.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 132.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 132.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 125.
+LaTeX Font Info:    Trying to load font information for OML+txmi on input line 125.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 132.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 132.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 125.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 125.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 132.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 125.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 125.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 132.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 132.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 125.
+LaTeX Font Info:    Trying to load font information for OMX+txex on input line 125.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 132.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 132.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 125.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 125.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -666,7 +718,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 132.
+Package hyperref Info: Link coloring ON on input line 125.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -674,50 +726,50 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count286
+\c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 132.
-LaTeX Info: Redefining \pageref on input line 132.
-LaTeX Info: Redefining \nameref on input line 132.
+LaTeX Info: Redefining \ref on input line 125.
+LaTeX Info: Redefining \pageref on input line 125.
+LaTeX Info: Redefining \nameref on input line 125.
 
 
 LaTeX Font Warning: Font shape `TU/txr/b/n' undefined
-(Font)              using `TU/txr/m/n' instead on input line 174.
+(Font)              using `TU/txr/m/n' instead on input line 167.
 
 
 LaTeX Font Warning: Font shape `TU/txr/m/it' undefined
-(Font)              using `TU/txr/m/n' instead on input line 178.
+(Font)              using `TU/txr/m/n' instead on input line 171.
 
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 190.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 190.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 183.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 183.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 190.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 183.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 190.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 183.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 190.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 183.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 190.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 183.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Calculating math sizes for size <9.09996> on input line 190.
+LaTeX Font Info:    Calculating math sizes for size <9.09996> on input line 183.
 File: elsevier-logo-3p.pdf Graphic file (type pdf)
 <use elsevier-logo-3p.pdf>
-LaTeX Font Info:    Trying to load font information for TU+txss on input line 223.
-LaTeX Font Info:    No file TUtxss.fd. on input line 223.
+LaTeX Font Info:    Trying to load font information for TU+txss on input line 221.
+LaTeX Font Info:    No file TUtxss.fd. on input line 221.
 
 
 LaTeX Font Warning: Font shape `TU/txss/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 223.
+(Font)              using `TU/lmr/m/n' instead on input line 221.
 
 File: SDlogo-3p.pdf Graphic file (type pdf)
 <use SDlogo-3p.pdf>
@@ -745,50 +797,70 @@ Overfull \vbox (45.712pt too high) has occurred while \output is active []
 ]
 File: ./visuals/gr1.pdf Graphic file (type pdf)
 <use ./visuals/gr1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [2]
-Underfull \hbox (badness 10000) detected at line 261
+Underfull \hbox (badness 10000) detected at line 259
 []
  []
 
 
-Underfull \hbox (badness 10000) detected at line 277
+Underfull \hbox (badness 10000) detected at line 275
 []
  []
 
 [3]
-Underfull \vbox (badness 1132) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4] [5] [6]
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
 File: ./visuals/gr2.pdf Graphic file (type pdf)
 <use ./visuals/gr2.pdf>
 File: ./visuals/gr3.pdf Graphic file (type pdf)
 <use ./visuals/gr3.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7851) has occurred while \output is active []
 
- [7] [8]
+ [7]
+Underfull \vbox (badness 8000) has occurred while \output is active []
+
+ [8]
 File: ./visuals/gr4.pdf Graphic file (type pdf)
 <use ./visuals/gr4.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9] (./nir-grigoryev.bbl
-Underfull \hbox (badness 1014) in paragraph at lines 32--37
+ [9]
+Underfull \hbox (badness 10000) detected at line 457
+[]
+ []
+
+[10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11] (./nir-grigoryev.bbl
+Underfull \hbox (badness 1014) in paragraph at lines 56--61
 []\TU/txr/b/n/8 Grootendorst, M., 2022.  Bertopic: Neural topic modeling with a class-based tf-idf procedure.  arXiv preprint
  []
 
-) [10] (./nir-grigoryev.aux)
+[12]) [13] (./nir-grigoryev.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 10999 strings out of 476191
- 169515 string characters out of 5812072
- 479392 words of memory out of 5000000
- 31556 multiletter control sequences out of 15000+600000
- 504954 words of font info for 142 fonts, out of 8000000 for 9000
+ 11695 strings out of 476191
+ 179258 string characters out of 5812072
+ 491386 words of memory out of 5000000
+ 32232 multiletter control sequences out of 15000+600000
+ 506148 words of font info for 146 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 70i,15n,76p,1483b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,15n,76p,1483b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nir-grigoryev.xdv (10 pages, 301352 bytes).
+Output written on nir-grigoryev.xdv (13 pages, 386196 bytes).

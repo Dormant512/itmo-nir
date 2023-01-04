@@ -179,8 +179,51 @@ In addition, the authors gave a brief description of non-parametric methods for 
 
 ## Prediction with exogenous variables
 
-Наличие внешних (экзогенных) переменных, скоррелированных с прогнозируемой, может улучшить качество предсказания. Для этого используются модели ARIMAX/SARIMAX, являющиеся расширением ARIMA/SARIMA, учитывающих экзогенные параметры. В публикации [33] модели ARIMA и ARIMAX сравнивались в задаче прогнозирования урожая сахарного тростника в Харьяне, Индии. Было показано, что привлечение погодных условий в качестве экзогенных переменных, позволило уменьшить ошибки прогнозирования.
+According to [smelser2001], "the variables that show differences we wish to explain are called endogenous, while the variables used to explain the differences are  called exogenous". If a hypothesis exists, that the observed changes in any variable (called endogenous) are caused by changes in some other variables, the latter are referred to as exogenous.
 
-## Impact of context information on consumption
+Victor Gijsbers, the author of the publication [gijsbers2021], elaborates on the concept of causality and it being perceived. According to the paper and despite the arguments againt the Humean regularity theory that views any perception of a cause-effect pair as universal, experiencing causation leaves open the possibility that either the causality itself or its experience depend on some external events. This implies, that at least for statistical data on human behavior, which cannot be considered strongly local, the perception of causality ($a^* \to b^*$) can theoretically be generalized to ($A \to B$). Here, $a^*$ and $b^*$ denote specific local observations of random variables $A$ and $B$, while the arrow depicts causality.
 
-В рамках данной работы была выдвинута гипотеза, что временные ряды могут быть зависимыми от других переменных, измеряемых во времени. В частности, потребительская активность может быть в какой-то мере объяснена контекстными переменными, такими как экономическими параметрами или популярностью тем в новостных источниках. Несмотря на то, что автор публикации [32] опровергает теорию Дэвида Юма, гласящую о наблюдаемых примерах причинности как частном случае общей системы мира, знание о контексте процесса может быть использовано для улучшения качества прогнозов. Это связано с возможностью непрямой взаимосвязи процесса и контекста, когда речь не идёт о простых причинно-следственных отношениях. В математических терминах можно назвать такую связь корреляцией. 
+Thus, if the chosen exogenous variables either cause the changes in the predicted variables or have an indirect impact on them, the usage of such variables in a forecasting model can increase its performance. An example of such increase is presented in the publication [verma2022]. The authors tested ARIMA and ARIMAX, the latter being the same autoregressive model but capable of including exogenous context, in the task of sugarcane yield forecasting in Haryana, India. According to the article, ARIMAX, utilizing exogenous weather data for fitting the model, showed consistently better results than the baseline ARIMA. The values of RMSE, used to compare the models, are given in [table aaa].
+
+*Table aaa: Comparative view in terms of RMSEs of sugarcane yield forecasts based on ARIMA and ARIMAX models.*
+
+| District    | ARIMA RMSE | ARIMAX RMSE |
+| ----------- | ---------- | ----------- |
+| Karnal      | 7.44       | 4.18        |
+| Ambala      | 6.07       | 4.30        |
+| Kurukshetra | 9.32       | 6.62        |
+
+ARIMAX is one of the most widely used models for forecasting with exogenous context, however, many of the methods described in [previous section] allow for the usage of such variables. The authors of the article [dasilva2020], however did not compare models with exogenous variables to those without them, utilized context information for all of their forecasts across five methods in two variations. This includes:
+
+- BRNN -- bidirectional recurrent neural networks are RNNs that allow both positive and negative time directions. This lets future information (such as future values of exogenous variables) to be included at a certain time frame.
+- CUBIST is rule-based forecasting algorithm that establishes regression models with certain rules based on the input data. General linear regression was used in the paper [dasilva2020]. Despite the non-linear nature of some time series, implementation of the rules mentioned above lets CUBIST fit complicated temporal patterns.
+- $k$NN -- $k$-nearest neighbors method described in [previous section] allows for exogenous variables without major modifications as the latter can be used in the $Q$-queries alongside predicted variables.
+- QRF -- quantile random forest is an extension of the random forest (RF) ensemble learning model. In the QRF algorithm, conditional quantiles are utilized. In contrast to conventional RF models, QRF uses full conditional distribution of the predicted variables instead of just the mean.
+- SVR -- support vector regression also described in [previous section] similarly to $k$NN is capable of taking in exogenous variables as-is.
+
+All of the models were used both with and without data preprocessing via variational mode decomposition (VMD). It decomposes a time series into a certain number of mode functions with different sparsities.
+
+The authors of the paper [dasilva2020] tested the mentioned models against each other in the task of predicting COVID-19 cases in Brazil and USA. Climatic data was used as exogenous variables. According to the results presented in the article, the best predictions for each state in both countries had low values of RRMSE (no more than 6.29\% but generally between 1 and 3\%). This implies high predictive qualities of models fit with help of exogenous variables, even on large forecast horizons.
+
+Many more variations of autoregressive models that have the capability of including exogenous variables exist. For example, the author of the Master's thesis [ding2021] utilized VARX (vector autoregression with exogenous variables) for predicting stocks and CDS. VARX is an extesion of VAR (vector autoregression) which is closely related to ARIMA. The major benefit of VAR over ARIMA is the capability of multivariate analysis with cross-correlations between different variables. Below, an example equation for VARX with two variables is presented.
+$$
+\begin{pmatrix}\Delta x_t \\ \Delta y_t \end{pmatrix} = \begin{pmatrix}\alpha_0 \\ \beta_0 \end{pmatrix} + \begin{pmatrix}\sum_{i=1}^p \alpha_{1,i} & \sum_{i=1}^p \alpha_{2,i} \\ \sum_{i=1}^p \beta_{1,i} & \sum_{i=1}^p \beta_{2,i} \end{pmatrix} \begin{pmatrix}\Delta x_{t-1} \\ \Delta y_{t-1} \end{pmatrix} + \begin{pmatrix}\alpha_3 & \alpha_4 \\ \beta_3 & \beta_4 \end{pmatrix} \begin{pmatrix}\Delta z_{1, t-1} \\ \Delta z_{2, t-1} \end{pmatrix} + \begin{pmatrix}\epsilon_t \\ \varepsilon_t \end{pmatrix}
+$$
+Here, $x$ and $y$ are endogenous variables, $z_1$ and $z_2$ -- exogenous. Coefficients $\alpha_1$ and $\beta_2$ refer to autoregressive coefficients of $x$ and $y$, accordingly, while $\alpha_2$ and $\beta_1$ are cross-coefficients. The last term in the equation is white noise of the corresponding dimension.
+The author used VARX model in the task of predicting CDS and stock prices on the Norwegian market using bond yield and NOK/EUR currency exchange rate (their once-differenced time series) as exogenous variables. According to the thesis, a causal bond between the endogenous variables was found in the way that using exogenous context alongside stock prices as predictors lets accurately forecast CDS, however the opposite is not true. Thus, VARX is a valid method for predicting time series when cross-correlatioins between endogenous variables coexists with important exogenous context. 
+
+Another example of an autoregressive model utilizing exogenous variables is brought up in the publication [li2022]. The authors used nonlinear autoregressive (NARX) model which is a modification of simple AR that allowes for:
+
+1. exogenous variables;
+2. nonlinearity in time series patterns.
+
+The model is defined by the equation below:
+$$
+y_t = f(y_{t-i}, x_{k, t-j}), \qquad \begin{matrix}i \in [1, m] \\ j \in [1, n] \\ k \in [1, n] \end{matrix}
+$$
+Here, $y$ is endogenous, $x_k$ is exogenous and $f(\cdots)$ is a nonlinear function. The authors of the paper used a focused time-delay neural network (FTDNN) for $f$. The network itself has a complex series-parallel architecture, where the structure of the network changes as the training goes on. According to the article, FTDNN has several advantages over conventionally used RNN including extended capabilities of dealing with short sequence lengths and feature sizes.
+
+The authors tested this NARX model for forecasting traffic flow in the selected portion of a street in the city of Guilin. The model performed reasonably well with $R$ metrics around $0.96$ and showed even better predictions after one differencing of the time series. In comparison to more conventional methods, NARX without differencing showed performance better than Holt-Winters method but worse than SARIMA. NARX with one differencing, however, outperformed both models with the $R^2$ metric reaching the value of $0.957$.
+
+## Impact of context information (news) on consumption
+

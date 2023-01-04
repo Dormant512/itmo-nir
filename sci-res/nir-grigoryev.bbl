@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{16}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -22,11 +22,35 @@
 \newblock \bibinfo{journal}{Data in brief} \bibinfo{volume}{29},
   \bibinfo{pages}{105340}.
 %Type = Article
+\bibitem[{Da~Silva et~al.(2020)Da~Silva, Ribeiro, Mariani and dos
+  Santos~Coelho}]{da2020forecasting}
+\bibinfo{author}{Da~Silva, R.G.}, \bibinfo{author}{Ribeiro, M.H.D.M.},
+  \bibinfo{author}{Mariani, V.C.}, \bibinfo{author}{dos Santos~Coelho, L.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Forecasting brazilian and american covid-19 cases
+  based on artificial intelligence coupled with climatic exogenous variables}.
+\newblock \bibinfo{journal}{Chaos, Solitons \& Fractals} \bibinfo{volume}{139},
+  \bibinfo{pages}{110027}.
+%Type = Masterthesis
+\bibitem[{Ding(2021)}]{ding2021empirical}
+\bibinfo{author}{Ding, R.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Empirical Evidence of Lead-Lag Relation between the
+  Norwegian CDS and Stock Markets: Using Vector Autoregression with Exogenous
+  Variables (VARX) and Structured Regularization for Large Vector
+  Autoregressions with Exogenous Variables (VARX-L) Framework}.
+\newblock Master's thesis.
+%Type = Article
 \bibitem[{Egger and Yu(2022)}]{egger2022topic}
 \bibinfo{author}{Egger, R.}, \bibinfo{author}{Yu, J.}, \bibinfo{year}{2022}.
 \newblock \bibinfo{title}{A topic modeling comparison between lda, nmf,
   top2vec, and bertopic to demystify twitter posts}.
 \newblock \bibinfo{journal}{Frontiers in Sociology} \bibinfo{volume}{7}.
+%Type = Article
+\bibitem[{Gijsbers(2021)}]{gijsbers2021perceiving}
+\bibinfo{author}{Gijsbers, V.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Perceiving causation and causal singularism}.
+\newblock \bibinfo{journal}{Synthese} \bibinfo{volume}{199},
+  \bibinfo{pages}{14881--14895}.
 %Type = Article
 \bibitem[{Grootendorst(2022)}]{grootendorst2022bertopic}
 \bibinfo{author}{Grootendorst, M.}, \bibinfo{year}{2022}.
@@ -58,6 +82,14 @@
   learning algorithms: A case study osorio wind farm, brazil}.
 \newblock \bibinfo{journal}{Applied Energy} \bibinfo{volume}{224},
   \bibinfo{pages}{550--566}.
+%Type = Article
+\bibitem[{Li et~al.(2022)Li, Li and Lian}]{li2022nonlinear}
+\bibinfo{author}{Li, J.}, \bibinfo{author}{Li, W.}, \bibinfo{author}{Lian, G.},
+  \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{A nonlinear autoregressive model with exogenous
+  variables for traffic flow forecasting in smaller urban regions}.
+\newblock \bibinfo{journal}{Promet} \bibinfo{volume}{34},
+  \bibinfo{pages}{943--957}.
 %Type = Inproceedings
 \bibitem[{Liang et~al.(2018)Liang, Ke, Zhang, Yi and Zheng}]{liang2018geoman}
 \bibinfo{author}{Liang, Y.}, \bibinfo{author}{Ke, S.}, \bibinfo{author}{Zhang,
@@ -93,5 +125,20 @@
 \newblock \bibinfo{title}{Deep state space models for time series forecasting}.
 \newblock \bibinfo{journal}{Advances in neural information processing systems}
   \bibinfo{volume}{31}.
+%Type = Book
+\bibitem[{Smelser et~al.(2001)Smelser, Baltes
+  et~al.}]{smelser2001international}
+\bibinfo{author}{Smelser, N.J.}, \bibinfo{author}{Baltes, P.B.}, et~al.,
+  \bibinfo{year}{2001}.
+\newblock \bibinfo{title}{International encyclopedia of the social \&
+  behavioral sciences}. volume~\bibinfo{volume}{11}.
+\newblock \bibinfo{publisher}{Elsevier Amsterdam}.
+%Type = Article
+\bibitem[{VERMA et~al.(2022)}]{verma2022arima}
+\bibinfo{author}{VERMA, U.}, et~al., \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Arima and arimax models for sugarcane yield
+  forecasting in northern agro-climatic zone of haryana}.
+\newblock \bibinfo{journal}{Journal of Agrometeorology} \bibinfo{volume}{24},
+  \bibinfo{pages}{200--202}.
 
 \end{thebibliography}
