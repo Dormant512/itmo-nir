@@ -151,7 +151,9 @@
 %% \dochead can also be used to include a conference title, if directed by the editors
 %% e.g. \dochead{17th International Conference on Dynamical Processes in Excited States of Solids}
 
-\title{A study of the influence of news reports and other contextual open-source information on the consumer behavior of bank card users}
+%\title{A study of the influence of news reports and other contextual open-source information on the consumer behavior of bank card users}
+
+\title{An overview of machine learning methods used in forecasting financial time series from news}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{<author name>}
@@ -165,7 +167,7 @@
 \address[a]{ITMO University, Kronverksky Pr. 49, bldg. A, St. Petersburg, 197101, Russia}
 
 \begin{abstract}
-We live in a world filled with media. Thus, a hypothesis can be formulated that background context such as news and open-source statistics can influence the way we consume goods in various categories. This research is an endeavour into the impact of context information on consumer behavior. The study of such influence is performed as prediction of consumption time series with context as exogenous variables.
+We live in a world filled with media having an impact on almost every aspect of our lives. Thus, a hypothesis can be formulated that news can influence the way we behave economically. This research is an endeavour into the methods of processing text-based information such as news and using them to predict economical variables related to some form of consumption. The overview of those methods fills the knowledge gap between the topics of natural language processing (NLP) and time series forecasting.
 \end{abstract}
 
 \begin{keyword}
@@ -196,6 +198,11 @@ Machine Learning ; Natural Language Processing ; Topic Analysis ; Autoregressive
 \section{Introduction}
 %\label{main}
 
+As methods of machine learning evolve and improve, the spheres of natural language processing (NLP) and time series forecasting grow in popularity among researchers across a range of sciences. However, there is a knowledge gap between the two topics as simultaneous usage of NLP-related and process modeling methods is quite rare in practice.
+
+Consequently, the aim of this research work is to highlight usecases that act as intersections of NLP and time series in applied sciences. As of today, the majority of people have access to some form of media, be it social media within the realms of the Internet or news presented via television or newspapers. Thus, a valid research niche that combines the methods of NLP and process forecasting is the usage of text-based information (news and other media) as predictors for estimating future values of economical parameters. Such endeavors may give some insight into causality between the media surrounding us and the way we behave financially.
+
+Due to the specificity of such research, the body of this work is divided into four subsections, the first highlighting the methods of NLP that find use in processing news or similar textual data. Subsections two and three are dedicated to time series forecasting (without and with exogenous variables). Finally, the last subsection combines the knowledge described previously and answers questions, whether it is possible to use text-based information for mentioned purposes.
 
 %\begin{nomenclature}
 %\begin{deflist}[A]
@@ -205,7 +212,7 @@ Machine Learning ; Natural Language Processing ; Topic Analysis ; Autoregressive
 %\end{deflist}
 %\end{nomenclature}
 
-\section{Related work}
+\section{Literature overview}
 
 
 \setlength{\belowdisplayskip}{12pt} \setlength{\belowdisplayshortskip}{7pt}
@@ -214,7 +221,7 @@ Machine Learning ; Natural Language Processing ; Topic Analysis ; Autoregressive
 
 \subsection{Topic analysis} \label{ta}
 
-The main goal of this part of literature review is the choice of topic analysis methods to be used in this research work for processing news headlines. Thus, the most acknowledged methods ranging from classic LDA to modern BERTopic are looked upon in this section.
+The main goal of this part of literature review is to overview the conventional methods of topic analysis that can be used for processing news headlines and similar textual information. The methods mentioned here range from classic LDA to modern BERTopic.
 
 Topic analysis is one of the tasks of natural language processing (NLP). It consists of embedding human-legible texts into machine-readable embeddigs, dimension reduction and further clustering of the embeddings. Such clusters can be interpreted as topics found in the texts, hence the name "topic analysis". One of the classical methodologies of topic analysis is the "bag-of-words", an approach for viewing documents as unstructured vocabularies of words with different frequencies. It was the foundation for a plethora of commonly used topic analysis tools such as LDA, NMF, Top2Vec and CTM.
 
@@ -224,15 +231,15 @@ For embedding scientific texts several approaches including word2vec, POS2vec, w
 
 In the publication K-means, K-modes, K-means++, SOM and DIANA were chosen as the clustering algorithms. Classical K-means is a simple partition-based clustering method, while K-modes is its extension better suited for categorical data. As K-means' performance highly depends on the initial random seed for the coordinates of cluster centers, K-means++ uses a heuristic function to determine the optimal initial cluster centers. Self-organizing maps (SOM) method is based on clustering and dimension reduction. Divisive analysis clustering (DIANA) is a divisive hierarchical clustering method. Finally, the authors proposed iterative voting consensus (IVC) -- a consensus function which seeks cohesion between different clustering methods on the same data and thus lets those algorithms compensate for each others' weaknesses.
 
-The authors have compared 43 different configurations of topic analysis pipeline on the same dataset of scientific abstracts. The models were compared by values of the following metrics: Jaccard Coefficient (JC), FM and F1.
+The authors have compared 43 different configurations of topic analysis pipeline on the same dataset of scientific abstracts. The models were compared by values of the following metrics: Jaccard Coefficient (JC), FM and F1 defined by the equations \ref{eq:ta1}, \ref{eq:ta2}, \ref{eq:ta3}, accordingly.
 
-\begin{equation}
+\begin{equation} \label{eq:ta1}
 JC = \frac{a}{a+b+c}
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:ta2}
 FM = \left( \frac{a}{a+b} \cdot \frac{a}{a+c} \right)^{0.5}
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:ta3}
 F1 = \frac{2a^2}{2a^2 + ac + ab}
 \end{equation}
 
@@ -242,7 +249,7 @@ According to the results presented in the article and in figure \ref{fig:gr1} (\
 
 Even better results were shown by the proposed clustering ensemble framework which utilizes IVC for combining the mentioned methods. Thus, such proposed ensemble approach can lead to better topic analysis models.
 
-\begin{figure}[t]\vspace*{4pt}
+\begin{figure}[!h]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.75\textwidth]{./visuals/gr1.pdf}}
 \caption{Jaccard Coefficient metric for different combinations of embedding and clustering methods.}
@@ -291,8 +298,8 @@ In conclusion, the authors have proposed a model fine-tuned for joint aspect-sen
 
 However, more often the extraction of topics is enough. In contrast to the ensemble approach proposed in the publication \cite{onan2019two}, authors of the article \cite{grootendorst2022bertopic} leverage different modified algorithms that compose BERTopic -- a modern and efficient topic analysis tool.
 
-Its defining feature is the ability to extract topics dynamically and to build topic popularity time series. This is allowed by using c-TF-IDF (class term frequency inverse document frequency) representations of topics:
-\begin{equation}
+Its defining feature is the ability to extract topics dynamically and to build topic popularity time series. This is allowed by using c-TF-IDF (class term frequency inverse document frequency) representations of topics defined by equation \ref{eq:ta4}.
+\begin{equation} \label{eq:ta4}
 \mathrm{c\_TF\_IDF} = \underbrace{\frac{n_t}{\sum\limits_{k \in \mathrm{class}} n_k}}_{\mathrm{c\_TF}} \cdot \underbrace{\log \left[ \frac{|D|}{|\{ d_i \in D | t \in d_i \}|} \right]}_{\mathrm{IDF}}
 \end{equation}
 Here c-TF is defined by the number of instances of word $t$ divided by the number of words in the class, $|D|$ - number of documents in the dataset, $|\{ d_i \in D | t \in d_i \}|$ -- number of documents in dataset, containing the word $t$. First, BERTopic is fitted on the entire dataset to create a global view of topics. Using c-TF-IDF is efficient, as IDF is computed globally and only c-TF needs to be computed at each timestep.
@@ -318,7 +325,7 @@ BERTopic uses BERT pretrained embedders alongside with sentence-transformers for
 
 Human interpretation of the extracted topics has shown that BERTopic and NMF perform the best among four tested methods. Despite that top2vec and BERTopic both use pretrained embedders for the representation of documents in vector space, many topics extracted by top2vec contained several semantic concepts or intersected each other. LDA gave the least legible results of all methods.
 
-The authors mentioned several drawbacks of BERTopic models such as them yielding large numbers of clusters which leads to the need in manual topic processing. Another mentioned disadvantage is that one document could potentially be assigned to just one topic, which often does not reflect reality. In spite of this, BERTopic still can be characterized as one of the most successful and universally applicable methods of topic analysis due to high model quality and efficiency. Thus, BERTopic was the topic analysis method of choice in the current research work.
+The authors mentioned several drawbacks of BERTopic models such as them yielding large numbers of clusters which leads to the need in manual topic processing. Another mentioned disadvantage is that one document could potentially be assigned to just one topic, which often does not reflect reality. In spite of this, BERTopic still can be characterized as one of the most successful and universally applicable methods of topic analysis due to high model quality and efficiency.
 
 \subsection{Time series prediction} \label{tsp}
 
@@ -326,63 +333,63 @@ Time series forecasting is one of the most important tasks related to time-depen
 
 Among the parametric methods the following were described:
 \begin{enumerate}
-	\item Moving averages models (MA), simple models that view predicted values at a certain timestep as averages over some interval before this step. MA model is defined by the equation:
-\begin{equation}
+	\item Moving averages models (MA), simple models that view predicted values at a certain timestep as averages over some interval before this step. MA model is defined by the equation \ref{eq:tsp1}.
+\begin{equation} \label{eq:tsp1}
 z_{t+1} = \frac{\sum\limits_{i=0}^{r-1}z_{t-i}}{r}
 \end{equation}
 Here, $t$ is the timestep, $z_{t+1}$ is the predicted value and $r$ is the number of observations included in the average. Such models are simple but lack quality, when data has seasonality, trend or high-frequency noise.
-	\item Simple exponential smoothing models (SES) are conceptually close to MA. The main difference is that all previous timesteps are taken into account with different weights, which exponentially decrease the further away from prediction the timestep is. They are defined by the following equation:
-\begin{equation}
+\item Simple exponential smoothing models (SES) are conceptually close to MA. The main difference is that all previous timesteps are taken into account with different weights, which exponentially decrease the further away from prediction the timestep is. They are defined by the equation \ref{eq:tsp2}.
+\begin{equation} \label{eq:tsp2}
 z_{t+1} = L_t = \sum_{i=0}^{t-1} \alpha (1-\alpha)^i z_{t-i}
 \end{equation}
-Here $\alpha \in (0,1)$ is the weight for constant smoothing and $L_t$ is the estimate for the next step at time $t$. For ease of computation, recurrent simplification can be formalized:
-\begin{equation}
+Here $\alpha \in (0,1)$ is the weight for constant smoothing and $L_t$ is the estimate for the next step at time $t$. For ease of computation, recurrent simplification can be formalized by equation \ref{eq:tsp3}.
+\begin{equation} \label{eq:tsp3}
 L_t = \alpha z_t + (1-\alpha) L_{t-1}
 \end{equation}
 Initially, it is supposed that $L_1 = z_1$. The main drawback of the method is the difficulty in optimizing $\alpha$ and inaccurate results when dealing with trends.
-	\item Holt's exponential smoothing (HES) is an extension of SES that utilizes a second smoothing constant $\beta$ for modeling trends. HES models are defined by equations:
-\begin{equation}
+\item Holt's exponential smoothing (HES) is an extension of SES that utilizes a second smoothing constant $\beta$ for modeling trends. HES models are defined by equations \ref{eq:tsp4}, \ref{eq:tsp5} and \ref{eq:tsp6}.
+\begin{equation} \label{eq:tsp4}
 L_t = \alpha z_t + (1-\alpha) (L_{t-1} + T_{t-1})
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:tsp5}
 T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:tsp6}
 z_{t+h} = L_t + hT_t
 \end{equation}
 Here, $L$ and $T$ are the level and trend components, accordingly, and $h$ is the prediction horizon (more than 1 step as opposed to SES). Initially, $L_1 = z_1$ and $T_1 = z_2 - z_1$. As in SES method, the most difficult part is the optimization of $\alpha$ and $\beta$ constants.
-	\item Holt-Winters' seasonal exponential smoothing models (HW) iterate on HES method principles and additionally deal with seasonality by adding another constant $\gamma$. More commonly used additive HW models (AHW) are defined by equations:
-\begin{equation}
+\item Holt-Winters' seasonal exponential smoothing models (HW) iterate on HES method principles and additionally deal with seasonality by adding another constant $\gamma$. More commonly used additive HW models (AHW) are defined by equations \ref{eq:tsp7}, \ref{eq:tsp8}, \ref{eq:tsp9} and \ref{eq:tsp10}.
+\begin{equation} \label{eq:tsp7}
 L_t = \alpha (z_t - S_{t-s}) + (1-\alpha) (L_{t-1} + T_{t-1})
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:tsp8}
 T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:tsp9}
 S_t = \gamma (z_t - L_t) + (1-\gamma) S_{t-s}
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:tsp10}
 z_{t+h} = L_t + hT_t + S_{t-s+h}
 \end{equation}
-Here, $S$ is the seasonal component and $s$ denotes the number of timesteps that make a full seasonal cycle. $L$ is usually initialized with:
-\begin{equation}
+Here, $S$ is the seasonal component and $s$ denotes the number of timesteps that make a full seasonal cycle. $L$ is usually initialized by the equation \ref{eq:tsp11}.
+\begin{equation} \label{eq:tsp11}
 L_s = \frac{1}{s} \sum_{i=1}^s z_i
 \end{equation}
-$T$ with:
-\begin{equation}
+$T$ with equation \ref{eq:tsp12}.
+\begin{equation} \label{eq:tsp12}
 T_s = \frac{1}{s} \sum_{i=1}^s \frac{z_{s+i} - z_i}{s}
 \end{equation}
-and $S$ indexes are computed:
-\begin{equation}
+and $S$ indexes are computed according to equation \ref{eq:tsp13}:
+\begin{equation} \label{eq:tsp13}
 S_i = z_i - L_s, \quad i \in [1,s]
 \end{equation}
-	\item (S)ARIMA, (seasonal) autoregressive integrated moving average models provide even higher quality forecasts for stochastic time series and conceptually include three operations: autoregression AR with parameter $p$, intergration I with parameter $d$ and moving averages MA with parameter $q$. Here, integration refers to taking successive differences from the time series ($\Delta z_t = z_t - z_{t-1}$) so as to make the time series stationary, i.e. with no trend and constant deviation. ARIMA of order $(p,d,q)$ is defined by the equation:
-\begin{equation}
+\item (S)ARIMA, (seasonal) autoregressive integrated moving average models provide even higher quality forecasts for stochastic time series and conceptually include three operations: autoregression AR with parameter $p$, intergration I with parameter $d$ and moving averages MA with parameter $q$. Here, integration refers to taking successive differences from the time series ($\Delta z_t = z_t - z_{t-1}$) so as to make the time series stationary, i.e. with no trend and constant deviation. ARIMA of order $(p,d,q)$ is defined by the equation \ref{eq:tsp14}.
+\begin{equation} \label{eq:tsp14}
 I'_t = \Delta^d z_t = \delta + \sum_{i=1}^p \varphi_i I'_{t-i} + \sum_{i=1}^q \theta_i e_{t-i} + e_t
 \end{equation}
 Here, $I'_t$ is the value of the $d$-times differenced stationary time series, $\varphi_i$ are AR parameters with lags up to $p$ and $\theta_i$ are MA parameters with lags up to $q$. Parameter $\delta$ is the initial level of the model and the last term $e_t$ denotes white noise with zero mean and constant deviation. If $d>1$, the constant $\delta$ can be omitted.
-SARIMA model is an extension of ARIMA that takes in four additional parameters and models seasonality. It is essentially ARIMA $(p,d,q)$ with a seasonal part added. SARIMA of order $(p,d,q)\times (P,D,Q)_s$, where $P$, $D$ and $Q$ are maximum lags of AR, differencing degree and maximum lags of MA of the seasonal component denoted as $I''_t$ below:
-\begin{equation}
+SARIMA model is an extension of ARIMA that takes in four additional parameters and models seasonality. It is essentially ARIMA $(p,d,q)$ with a seasonal part added. SARIMA of order $(p,d,q)\times (P,D,Q)_s$, where $P$, $D$ and $Q$ are maximum lags of AR, differencing degree and maximum lags of MA of the seasonal component denoted as $I''_t$ below \ref{eq:tsp15}.
+\begin{equation} \label{eq:tsp15}
 I_t = \underbrace{\delta + \sum_{i=1}^p \varphi_i I'_{t-i} + \sum_{i=1}^q \theta_i e_{t-i} + e_t}_{\mathrm{ARIMA}} + \underbrace{\sum_{i=1}^P \Phi_i I''_{t-is} + \sum_{i=1}^Q \Theta_i e_{t-is}}_{I''_t = \Delta^D z_t}
 \end{equation}
 As in ARIMA, here $\delta$ can be omitted if $d+D > 1$. (S)ARIMA models are the most commonly used methods of time series forecasting in the modern practice due to algorithm efficiency, ease of use and high quality of predictions on a large range of time series.
@@ -391,8 +398,8 @@ A detailed usage example of ARIMA on the COVID-19 epidemic dataset is presented 
 
 In addition, the authors gave a brief description of non-parametric methods for forecasting processes, which include the following:
 \begin{enumerate}
-	\item Artificial neural networks (ANNs) are models comprised of neurons -- objects capable of taking several inputs, combining them linearly with a certain bias and feeding the output to an activation function (often sigmoid or relu). The output of a single neuron can be described by the equation:
-\begin{equation}
+	\item Artificial neural networks (ANNs) are models comprised of neurons -- objects capable of taking several inputs, combining them linearly with a certain bias and feeding the output to an activation function (often sigmoid or relu). The output of a single neuron can be described by the equation \ref{eq:tsp16}.
+\begin{equation} \label{eq:tsp16}
 f(\mathrm{net}) = f\left( \sum_{i=1}^l w_i x_i + b \right)
 \end{equation}
 Here, $x_i$ and $w_i$ are inputs and weights, $b$ is a bias and $f$ is the activation function. Arranging neurons in several layers (multiple layer perceptron, MLP) was allowed by introducing backpropagation learning algorithms, where the weights are adjusted to better fit the data in reverse layer order.
@@ -426,17 +433,17 @@ It can be essentially broken down to two LSTM models, one acting as an encoder f
 
 The figure shows a set of hyperplanes dividing the two classes. An SVM seeks the optimal divider, where the highest separation margin (distance from divider to support vectors) is reached.
 As a part of a broader research, SVMs are used along other models in the publication \cite{khosravi2018time} for predicting wind speeds. It showed highly accurate predictions with $R$-statistics of up to $0.9938$, which is accurate, albeit less accurate than the other methods that comprised the research in \cite{khosravi2018time}. 
-	\item $k$-nearest neighbors ($k$NN) are in nature similarity-based classification algorithms. For forecasting $z_{m+1}$ for a time series $Z = (z_1, \cdots, z_m)$ the algorithm uses last $l$ timesteps as query $Q$ and searches for $k$ most similar subsequences to $Q$ by sliding a window of size $l$ along the time series. Then, the values of $S_{l+1}^{(j)}$ are averaged in an ensemble to predict $z_{m+1}$:
-\begin{equation}
+\item $k$-nearest neighbors ($k$NN) are in nature similarity-based classification algorithms. For forecasting $z_{m+1}$ for a time series $Z = (z_1, \cdots, z_m)$ the algorithm uses last $l$ timesteps as query $Q$ and searches for $k$ most similar subsequences to $Q$ by sliding a window of size $l$ along the time series. Then, the values of $S_{l+1}^{(j)}$ are averaged in an ensemble to predict $z_{m+1}$ as depicted in equation \ref{eq:tsp17}.
+\begin{equation} \label{eq:tsp17}
 f(S) = \frac{1}{k} \sum_{j=1}^k S_{l+1}^{(j)}
 \end{equation}
 Such $k$NN models have shown the capability to model highly complex non-linear patterns, especially in form of time series prediction with invariance $k$NN ($k$NN-TSPI). The later algorithm deals with trivial matches, amplitude, offset and complexity invariance.
-\item The authors of the publication \cite{rangapuram2018deep} offered a hybrid method that combined state space models (SSMs) with deep neural networks. Principally, SSMs utilize a latent space that is used to encode time series' features: level, trend and seasonality. Linear SSMs are described by the equation:
-\begin{equation}
+\item The authors of the publication \cite{rangapuram2018deep} offered a hybrid method that combined state space models (SSMs) with deep neural networks. Principally, SSMs utilize a latent space that is used to encode time series' features: level, trend and seasonality. Linear SSMs are described by the equation \ref{eq:tsp18}.
+\begin{equation} \label{eq:tsp18}
 \mathbf{l}_t = \mathbf{F}_t\mathbf{l}_{t-1} + \mathbf{g}_t \varepsilon_t, \quad \varepsilon_t \sim \mathcal{N} (0,1)
 \end{equation}
-Here, $\mathbf{l}_t$ is the state of the latent space at timestep $t$, $\mathbf{F}_t$ is a deterministic transition matrix and $\mathbf{g}_t \varepsilon_t$ is a random innovation. The predicted value is defined by the equation:
-\begin{equation}
+Here, $\mathbf{l}_t$ is the state of the latent space at timestep $t$, $\mathbf{F}_t$ is a deterministic transition matrix and $\mathbf{g}_t \varepsilon_t$ is a random innovation. The predicted value is defined by the equation \ref{eq:tsp19}.
+\begin{equation} \label{eq:tsp19}
 z_t = \mathbf{a}_t^\top \mathbf{l}_{t-1} + b_t + \sigma_t \varepsilon_t, \quad \varepsilon_t \sim \mathcal{N} (0,1)
 \end{equation}
 Here, $\mathbf{a}^\top \in \mathbb{R}^L$, $\sigma_t \in\mathbb{R}^{>0}$ and $b_t \in \mathbb{R}$ are time-varying parameters of the model.
@@ -480,8 +487,8 @@ All of the models were used both with and without data preprocessing via variati
 
 The authors of the paper \cite{da2020forecasting} tested the mentioned models against each other in the task of predicting COVID-19 cases in Brazil and USA. Climatic data was used as exogenous variables. According to the results presented in the article, the best predictions for each state in both countries had low values of RRMSE (no more than 6.29\% but generally between 1 and 3\%). This implies high predictive qualities of models fit with help of exogenous variables, even on large forecast horizons.
 
-Many more variations of autoregressive models that have the capability of including exogenous variables exist. For example, the author of the Master's thesis \cite{ding2021empirical} utilized VARX (vector autoregression with exogenous variables) for predicting stocks and CDS. VARX is an extesion of VAR (vector autoregression) which is closely related to ARIMA. The major benefit of VAR over ARIMA is the capability of multivariate analysis with cross-correlations between different variables. Below, an example equation for VARX with two variables is presented.
-\begin{equation}
+Many more variations of autoregressive models that have the capability of including exogenous variables exist. For example, the author of the Master's thesis \cite{ding2021empirical} utilized VARX (vector autoregression with exogenous variables) for predicting stocks and CDS. VARX is an extesion of VAR (vector autoregression) which is closely related to ARIMA. The major benefit of VAR over ARIMA is the capability of multivariate analysis with cross-correlations between different variables. Below, an example equation (\ref{eq:pwev1}) for VARX with two variables is presented.
+\begin{equation} \label{eq:pwev1}
 \begin{pmatrix}\Delta x_t \\ \Delta y_t \end{pmatrix}
 = \begin{pmatrix}\alpha_0 \\ \beta_0 \end{pmatrix}
 + \begin{pmatrix}\sum_{i=1}^p \alpha_{1,i} & \sum_{i=1}^p \alpha_{2,i} \\ \sum_{i=1}^p \beta_{1,i} & \sum_{i=1}^p \beta_{2,i} \end{pmatrix}
@@ -499,8 +506,8 @@ Another example of an autoregressive model utilizing exogenous variables is brou
 	\item exogenous variables;
 	\item nonlinearity in time series patterns.
 \end{enumerate}
-The model is defined by the equation below:
-\begin{equation}
+The model is defined by the equation \ref{eq:pwev2}.
+\begin{equation} \label{eq:pwev2}
 y_t = f(y_{t-i}, x_{k, t-j}), \qquad \begin{matrix}i \in [1, m] \\ j \in [1, n] \\ k \in [1, n] \end{matrix}
 \end{equation}
 Here, $y$ is endogenous, $x_k$ is exogenous and $f(\cdots)$ is a nonlinear function. The authors of the paper used a focused time-delay neural network (FTDNN) for $f$. The network itself has a complex series-parallel architecture, where the structure of the network changes as the training goes on. According to the article, FTDNN has several advantages over conventionally used RNN including extended capabilities of dealing with short sequence lengths and feature sizes.
@@ -509,10 +516,98 @@ The authors tested this NARX model for forecasting traffic flow in the selected 
 
 \subsection{Impact of context information on consumption} \label{icic}
 
+This final part of the literature overview is aimed to combine all the methods mentioned in previous subsections for answering the question, whether it is possible to use news as predictors for forecasting economical time series. This raises several questions, each narrower in nature:
+\begin{enumerate}
+	\item Do news have enough impact on the consumers to change their behavior?
+	\item How to process news to be used for fitting models?
+	\item Which models are capable of predicting consumption or other economical data using news.
+\end{enumerate}
+The first question was answered in the publications \cite{kamins1997consumer} and \cite{sago2014impact}. Their authors researched how marketplace rumors and corporate news (perceived mostly negatively) are likely to have an impact on consumers. In the article \cite{kamins1997consumer} surveys show that almost a third of the marketplace rumors received by a person may be passed along to other people thus targeting a larger demographical group. The paper \cite{sago2014impact} elaborated the point that negative corporate news about a brand of products are likely to decrease customer loyalty to the brand and the willingness to buy those products. Thus, news can be a powerful predictor for forecasting consumption, even generalizing away from brand perception.
+
+The second question was partially answered in subsection \ref{ta}, however there were more trivial (and less effective) ways of processing news in the scientific sphere, which will be discussed further. The background for using exogenous context in time series forecasting, necessary for answering the third question, was given in subsection \ref{pwev}. Below, some examples of predicting economical time series using news as predictors are given in chronological order, and thus in the order of natural language processing (NLP) advancement.
+
+The authors of \cite{mao2011predicting} utilized simple procedures of sentiment extraction from news headlines. This was done by counting the number of words from the negative financial lexicon defined in the article \cite{loughran2011liability} and the total number of words in the headline. The ratio between the two numbers is used as the predictor for forecasting economical parameters such as Dow Jones Industrial Average, trading volume, volatility (VIX) and the price of gold. The authors used autoregressive models $M_0$ (no exogenous variables) and $M_1$ (with exogenous variables) defined by equations \ref{eq:icic1} and \ref{eq:icic2}.
+\begin{equation} \label{eq:icic1}
+M_0: \quad Y_t = \alpha + \sum_{i=1}^n \beta_i Y_{t-i} + \varepsilon_t
+\end{equation}
+\begin{equation} \label{eq:icic2}
+M_1: \quad Y_t = \alpha + \sum_{i=1}^n \beta_i Y_{t-i} + \sum_{i=1}^n \gamma_i X_{t-i} + \varepsilon_t
+\end{equation}
+
+Here, $Y$ is endogenous, $X$ is exogenous, $\alpha$ is the level parameter, $\beta_i$ are autoregressive coefficients, $\gamma_i$ are exogenous coefficients, $\varepsilon$ is noise. The authors simultaneously use the mentioned negative news sentiment (NNS) alongside Twitter investor sentiment (TIS), tweet volume of financial search terms (TV-FST) and daily sentiment index (DSI), processed in similar ways.
+
+The authors showed that the autoregressive model had such good predictive qualities that the addition of exogenous context resulted in just a slight improvement. Nonetheless, there was an increase in forecast quality, which implies some degree of causality between the sentiments found in the news and the observed economical changes. 
+
+The authors of the publication \cite{vargas2017deep} went a step further via using embedding models for prediction. The article focuses on convolutional neural networks (CNNs) and recurrent neural networks (RNNs) for the task of forecasting stock prices using financial news. As CNNs show generally better results at NLP tasks and RNNs tend to be better at capturing temporal patterns, the authors propose RCNN -- the recurrent convolutional neural networks. The architecture of the model consists of four layers:
+\begin{enumerate}
+	\item Input layer consisting of the technical indicator layer that takes in a sequence of technical indicators in chronological order and the embedding layer that takes encoded sentences as input.
+	\item Convolutional layer is composed of convolution, pooling, activation and dropout. In the discussed article, it is tuned for temporal convolution. Thus, this layer can capture local information via combinations of embedded sentences in a window.
+	\item Recurrent layer is essentially two LSTM models, one for embeddings and one for technical indicators.
+	\item Output layer is simply a fully-connected softmax activated layer followed by a layer that solves the task of binary classification: $[1,0]$ for stock price increase and $[0,1]$ for decrease. 
+\end{enumerate}
+
+Schematic layout of the RCNN model is presented in figure \ref{fig:gr5}. 
+\begin{figure}[h!]\vspace*{4pt}
+%\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
+	\centerline{\includegraphics[width=0.6\textwidth]{./visuals/gr5.pdf}}
+\caption{Architecture of the RCNN model.}
+\label{fig:gr5}
+\end{figure}
+
+According to the results discussed by the authors, the proposed RCNN model outperforms all other baseline models (NNs, RNNs and CNNs) with the exception of EB-CNN (event embedding CNN) which is also a powerful method for modeling content in news articles.
+
+\newpage
+
+A more contemporary method for processing textual information and using it for forecasting time series is described in the publication \cite{lamon2017cryptocurrency}. The authors researched the ability of news and social media data to predict cryptocurrency prices. They used a modern pipeline consisting of:
+\begin{itemize}
+	\item a tokenizer to remove stop characters and punctuation (spaCy was used);
+	\item a vectorizer to embed the tokenized text into numerical data;
+	\item a classifier to learn feature weights (logistic regression and naive Bayes were chosen as the best performing algorithms for the task).
+\end{itemize}
+According to the published results, the models extracted general trends for price growth over the examined time period well, however predictions of daily price changes were quite inaccurate. Specifically, predicting fluctuations going against the general trend was a problem. Nonetheless, most of the predictions were correct, which implies the ability of non-technical data such as news to be used as predictors for financial variables.
+
+As the next step in developing a working forecasting model powered by news headlines, the authors of the article \cite{li2022novel} have proposed a framework tuned for this task. The designed text-based framework (TBF) takes full advantage of the textual input data and predicts agricultural futures such as soybean prices. The structure of TBF is depicted in figure \ref{fig:gr6}.
+\begin{figure}[h!]\vspace*{4pt}
+%\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
+	\centerline{\includegraphics[width=0.8\textwidth]{./visuals/gr6.pdf}}
+\caption{Structure of the text-based framework.}
+\label{fig:gr6}
+\end{figure}
+
+The framework combines tasks of topic analysis described in subsection \ref{ta}, sentiment analysis and time series forecasting. The most intriguing part of the framework is in the steps 2 and 3. The model identifies influential factors if those are easily quantifiable or performs sentiment analysis instead otherwise. This lets all the news to be utilized in model fitting without losing quality by including vague news.
+
+\newpage
+
+For the forecasting section of the framework, the authors used SVR (support vector regression), RF (random forest) and BPNN (back propagation neural network). The authors compared all TBF-based models to baseline ARIMA. According to the results presented in the article, TBF-RF and TBF-SVR performed as well as ARIMA with small prediction horizon while TBF-BPNN had significantly higher forecasting errors. Interestingly, starting from lags of 40-50 days, prediction error of ARIMA starts growing linearly with the lag. TBF models' errors reach a plateau after 10-15 days and remain stable regardless how large is the time lag. Thus, in medium- and long-term predictions all of the TBF-based models outperform ARIMA.
+
+Less task-specific methods were used by the author of the PhD thesis \cite{jeong2022predicting} in the task of Apple stock price forecasting. An array of conventional time series forecasting models allowing for exogenous context was used in conjunction with NLP methods for processing news headlines. For news sentiment analysis the following models were used:
+\begin{itemize}
+	\item LSTM (long short-term memory networks), a type of RNN discussed in subsection \ref{tsp}.
+	\item GRU (gated recurrent unit) is a modified LSTM, where the addition of new information and retention of old information are interdependent.
+	\item BERT (bidirectional encoder representation from transformers) is one of the cutting-edge NLP models with complicated architecture that takes advantage of transformers -- RNNs tuned for sequential information and NLP tasks.
+\end{itemize}
+
+For time series prediction the following methods were utilized:
+\begin{itemize}
+	\item (S)ARIMA(X), (seasonal) autoregressive integrated moving averages (with exogenous predictors) -- classical time series forecasting models discussed in seubsection \ref{tsp}.
+	\item Linear regression using PCA (principal component analysis), a method that performs dimension reduction and viewing the dependent variable as a linear combination of the predictors in the new latent space. 
+	\item RF (random forest method) is an ensemble learning method that consists of multiple decision trees. Every tree produces its prediction and they all are averaged for the total forecast. 
+	\item LSTM, described before.
+\end{itemize}
+
+According to the results presented in the article, SARIMAX failed to provide any accurate predictions in this task, while LSTM and, interestingly, linear regression with PCA had low MSE values of forecasts. Poor performance of SARIMAX could be explained by the lack of detail in the input data.
+
 \section{Conclusion}
+
+This research work highlighted the usage of news and similar text-based contextual information for researching the influence of news on consumer behavior by predicting financial time series. In doing so, NLP methods of topic analysis as well as a myriad of process forecasting methods that either allow exogenous variables or are especially tuned for text-based input, were structurally described and compared to each other in terms of implementation complexity and performance across a range of prediction tasks.
+
+Fortunately, in recent years more and more frameworks are developed that combine NLP and time series forecasting, which gradually closes the mentioned knowledge gap. This scientific work is a contribution into such research acting as a bird's eye view of the most acknowledged methods that might find more use in other practical works. 
 
 \section*{Acknowledgements}
 
+I would like to express my sincere gratitude to my supervisor Anthon Kovantsev who supported the choice of the topic and made this research possible. His assistance throughout the process of conducting this research helped it become more logically structured and helpful for the audience.
+
+I would also like to give special thanks to my family and close friends for their continuous support and understanding.
 
 %\enlargethispage{12pt}
 

@@ -5,45 +5,45 @@ The style file: elsarticle-harv.bst
 Database file #1: ./bibliography-nir.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--missing school in ding2021empirical
-You've used 16 entries,
+You've used 24 entries,
             2990 wiz_defined-function locations,
-            722 strings with 8372 characters,
-and the built_in function-call counts, 10712 in all, are:
-= -- 798
-> -- 440
-< -- 8
-+ -- 173
-- -- 153
-* -- 1149
-:= -- 1578
-add.period$ -- 47
-call.type$ -- 16
-change.case$ -- 127
-chr.to.int$ -- 16
-cite$ -- 17
-duplicate$ -- 801
-empty$ -- 780
-format.name$ -- 196
-if$ -- 1978
-int.to.chr$ -- 1
+            768 strings with 9954 characters,
+and the built_in function-call counts, 15869 in all, are:
+= -- 1200
+> -- 632
+< -- 12
++ -- 252
+- -- 219
+* -- 1700
+:= -- 2326
+add.period$ -- 70
+call.type$ -- 24
+change.case$ -- 188
+chr.to.int$ -- 23
+cite$ -- 25
+duplicate$ -- 1201
+empty$ -- 1161
+format.name$ -- 288
+if$ -- 2938
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 156
-newline$ -- 94
-num.names$ -- 64
-pop$ -- 302
+missing$ -- 230
+newline$ -- 133
+num.names$ -- 96
+pop$ -- 452
 preamble$ -- 1
-purify$ -- 113
+purify$ -- 167
 quote$ -- 0
-skip$ -- 236
+skip$ -- 349
 stack$ -- 0
-substring$ -- 461
-swap$ -- 561
-text.length$ -- 2
+substring$ -- 675
+swap$ -- 838
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 141
+type$ -- 213
 warning$ -- 1
-while$ -- 67
+while$ -- 104
 width$ -- 0
-write$ -- 234
+write$ -- 345
 (There was 1 warning)

@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{24}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -74,6 +74,20 @@
 \newblock \bibinfo{title}{Weakly-supervised aspect-based sentiment analysis via
   joint aspect-sentiment topic embedding}.
 \newblock \bibinfo{journal}{arXiv preprint arXiv:2010.06705} .
+%Type = Phdthesis
+\bibitem[{Jeong(2022)}]{jeong2022predicting}
+\bibinfo{author}{Jeong, J.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Predicting Apple Stock Price Using News Headlines and
+  Other Features With Classical Time Series Models, Supervised Models, and
+  Machine Learning Models}.
+\newblock Ph.D. thesis. UCLA.
+%Type = Article
+\bibitem[{Kamins et~al.(1997)Kamins, Folkes and Perner}]{kamins1997consumer}
+\bibinfo{author}{Kamins, M.A.}, \bibinfo{author}{Folkes, V.S.},
+  \bibinfo{author}{Perner, L.}, \bibinfo{year}{1997}.
+\newblock \bibinfo{title}{Consumer responses to rumors: Good news, bad news}.
+\newblock \bibinfo{journal}{Journal of consumer psychology}
+  \bibinfo{volume}{6}, \bibinfo{pages}{165--187}.
 %Type = Article
 \bibitem[{Khosravi et~al.(2018)Khosravi, Machado and Nunes}]{khosravi2018time}
 \bibinfo{author}{Khosravi, A.}, \bibinfo{author}{Machado, L.},
@@ -83,9 +97,26 @@
 \newblock \bibinfo{journal}{Applied Energy} \bibinfo{volume}{224},
   \bibinfo{pages}{550--566}.
 %Type = Article
-\bibitem[{Li et~al.(2022)Li, Li and Lian}]{li2022nonlinear}
+\bibitem[{Lamon et~al.(2017)Lamon, Nielsen and
+  Redondo}]{lamon2017cryptocurrency}
+\bibinfo{author}{Lamon, C.}, \bibinfo{author}{Nielsen, E.},
+  \bibinfo{author}{Redondo, E.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Cryptocurrency price prediction using news and social
+  media sentiment}.
+\newblock \bibinfo{journal}{SMU Data Sci. Rev} \bibinfo{volume}{1},
+  \bibinfo{pages}{1--22}.
+%Type = Article
+\bibitem[{Li et~al.(2022a)Li, Li, Liu, Zhu and Wei}]{li2022novel}
+\bibinfo{author}{Li, J.}, \bibinfo{author}{Li, G.}, \bibinfo{author}{Liu, M.},
+  \bibinfo{author}{Zhu, X.}, \bibinfo{author}{Wei, L.}, \bibinfo{year}{2022}a.
+\newblock \bibinfo{title}{A novel text-based framework for forecasting
+  agricultural futures using massive online news headlines}.
+\newblock \bibinfo{journal}{International Journal of Forecasting}
+  \bibinfo{volume}{38}, \bibinfo{pages}{35--50}.
+%Type = Article
+\bibitem[{Li et~al.(2022b)Li, Li and Lian}]{li2022nonlinear}
 \bibinfo{author}{Li, J.}, \bibinfo{author}{Li, W.}, \bibinfo{author}{Lian, G.},
-  \bibinfo{year}{2022}.
+  \bibinfo{year}{2022}b.
 \newblock \bibinfo{title}{A nonlinear autoregressive model with exogenous
   variables for traffic flow forecasting in smaller urban regions}.
 \newblock \bibinfo{journal}{Promet} \bibinfo{volume}{34},
@@ -98,6 +129,21 @@
 \newblock \bibinfo{title}{Geoman: Multi-level attention networks for
   geo-sensory time series prediction.}, in: \bibinfo{booktitle}{IJCAI}, pp.
   \bibinfo{pages}{3428--3434}.
+%Type = Article
+\bibitem[{Loughran and McDonald(2011)}]{loughran2011liability}
+\bibinfo{author}{Loughran, T.}, \bibinfo{author}{McDonald, B.},
+  \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{When is a liability not a liability? textual
+  analysis, dictionaries, and 10-ks}.
+\newblock \bibinfo{journal}{The Journal of finance} \bibinfo{volume}{66},
+  \bibinfo{pages}{35--65}.
+%Type = Article
+\bibitem[{Mao et~al.(2011)Mao, Counts and Bollen}]{mao2011predicting}
+\bibinfo{author}{Mao, H.}, \bibinfo{author}{Counts, S.},
+  \bibinfo{author}{Bollen, J.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Predicting financial markets: Comparing survey, news,
+  twitter and search engine data}.
+\newblock \bibinfo{journal}{arXiv preprint arXiv:1112.1051} .
 %Type = Article
 \bibitem[{Onan(2019)}]{onan2019two}
 \bibinfo{author}{Onan, A.}, \bibinfo{year}{2019}.
@@ -125,6 +171,14 @@
 \newblock \bibinfo{title}{Deep state space models for time series forecasting}.
 \newblock \bibinfo{journal}{Advances in neural information processing systems}
   \bibinfo{volume}{31}.
+%Type = Article
+\bibitem[{Sago and Hinnenkamp(2014)}]{sago2014impact}
+\bibinfo{author}{Sago, B.}, \bibinfo{author}{Hinnenkamp, C.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{The impact of significant negative news on consumer
+  behavior towards favorite brands}.
+\newblock \bibinfo{journal}{Global Journal of Business Research}
+  \bibinfo{volume}{8}, \bibinfo{pages}{65--72}.
 %Type = Book
 \bibitem[{Smelser et~al.(2001)Smelser, Baltes
   et~al.}]{smelser2001international}
@@ -133,6 +187,15 @@
 \newblock \bibinfo{title}{International encyclopedia of the social \&
   behavioral sciences}. volume~\bibinfo{volume}{11}.
 \newblock \bibinfo{publisher}{Elsevier Amsterdam}.
+%Type = Inproceedings
+\bibitem[{Vargas et~al.(2017)Vargas, De~Lima and Evsukoff}]{vargas2017deep}
+\bibinfo{author}{Vargas, M.R.}, \bibinfo{author}{De~Lima, B.S.},
+  \bibinfo{author}{Evsukoff, A.G.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Deep learning for stock market prediction from
+  financial news articles}, in: \bibinfo{booktitle}{2017 IEEE international
+  conference on computational intelligence and virtual environments for
+  measurement systems and applications (CIVEMSA)},
+  \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{60--65}.
 %Type = Article
 \bibitem[{VERMA et~al.(2022)}]{verma2022arima}
 \bibinfo{author}{VERMA, U.}, et~al., \bibinfo{year}{2022}.

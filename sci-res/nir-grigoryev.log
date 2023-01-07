@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.4.28)  5 JAN 2023 00:46
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.4.28)  8 JAN 2023 01:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -734,42 +734,42 @@ LaTeX Info: Redefining \nameref on input line 125.
 
 
 LaTeX Font Warning: Font shape `TU/txr/b/n' undefined
-(Font)              using `TU/txr/m/n' instead on input line 167.
+(Font)              using `TU/txr/m/n' instead on input line 169.
 
 
 LaTeX Font Warning: Font shape `TU/txr/m/it' undefined
-(Font)              using `TU/txr/m/n' instead on input line 171.
+(Font)              using `TU/txr/m/n' instead on input line 173.
 
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 183.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 183.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 185.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 185.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 183.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 185.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 183.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 185.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 183.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 185.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 183.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 185.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Calculating math sizes for size <9.09996> on input line 183.
+LaTeX Font Info:    Calculating math sizes for size <9.09996> on input line 185.
 File: elsevier-logo-3p.pdf Graphic file (type pdf)
 <use elsevier-logo-3p.pdf>
-LaTeX Font Info:    Trying to load font information for TU+txss on input line 221.
-LaTeX Font Info:    No file TUtxss.fd. on input line 221.
+LaTeX Font Info:    Trying to load font information for TU+txss on input line 206.
+LaTeX Font Info:    No file TUtxss.fd. on input line 206.
 
 
 LaTeX Font Warning: Font shape `TU/txss/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 221.
+(Font)              using `TU/lmr/m/n' instead on input line 206.
 
 File: SDlogo-3p.pdf Graphic file (type pdf)
 <use SDlogo-3p.pdf>
@@ -794,23 +794,29 @@ Overfull \vbox (45.712pt too high) has occurred while \output is active []
 
  [1
 
-]
+] [2]
 File: ./visuals/gr1.pdf Graphic file (type pdf)
 <use ./visuals/gr1.pdf>
 
+Underfull \hbox (badness 10000) detected at line 266
+[]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) detected at line 282
+[]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
-Underfull \hbox (badness 10000) detected at line 259
-[]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 275
-[]
- []
-
-[3]
+ [3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
@@ -825,42 +831,60 @@ File: ./visuals/gr2.pdf Graphic file (type pdf)
 File: ./visuals/gr3.pdf Graphic file (type pdf)
 <use ./visuals/gr3.pdf>
 
-Underfull \vbox (badness 7851) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-Underfull \vbox (badness 8000) has occurred while \output is active []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1005) has occurred while \output is active []
 
  [8]
 File: ./visuals/gr4.pdf Graphic file (type pdf)
 <use ./visuals/gr4.pdf>
-
+ [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-Underfull \hbox (badness 10000) detected at line 457
+ [10]
+Underfull \hbox (badness 10000) detected at line 464
 []
  []
 
-[10]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11] (./nir-grigoryev.bbl
+ [11] [12]
+File: ./visuals/gr5.pdf Graphic file (type pdf)
+<use ./visuals/gr5.pdf>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13]
+File: ./visuals/gr6.pdf Graphic file (type pdf)
+<use ./visuals/gr6.pdf>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14] [15] (./nir-grigoryev.bbl
 Underfull \hbox (badness 1014) in paragraph at lines 56--61
 []\TU/txr/b/n/8 Grootendorst, M., 2022.  Bertopic: Neural topic modeling with a class-based tf-idf procedure.  arXiv preprint
  []
 
-[12]) [13] (./nir-grigoryev.aux)
+[16]) [17] (./nir-grigoryev.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 11695 strings out of 476191
- 179258 string characters out of 5812072
- 491386 words of memory out of 5000000
- 32232 multiletter control sequences out of 15000+600000
+ 11765 strings out of 476191
+ 180508 string characters out of 5812072
+ 496265 words of memory out of 5000000
+ 32300 multiletter control sequences out of 15000+600000
  506148 words of font info for 146 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 70i,15n,76p,1483b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,14n,76p,1483b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nir-grigoryev.xdv (13 pages, 386196 bytes).
+Output written on nir-grigoryev.xdv (17 pages, 529212 bytes).
