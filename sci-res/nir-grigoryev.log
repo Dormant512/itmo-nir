@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.4.28)  8 JAN 2023 01:46
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.7.5)  9 JAN 2023 00:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -816,10 +816,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
+ [3] [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
@@ -880,11 +877,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  11765 strings out of 476191
- 180508 string characters out of 5812072
- 496265 words of memory out of 5000000
+ 180508 string characters out of 5812073
+ 497264 words of memory out of 5000000
  32300 multiletter control sequences out of 15000+600000
  506148 words of font info for 146 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  70i,14n,76p,1483b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nir-grigoryev.xdv (17 pages, 529212 bytes).
+Output written on nir-grigoryev.xdv (17 pages, 529528 bytes).

@@ -200,7 +200,7 @@ Machine Learning ; Natural Language Processing ; Topic Analysis ; Autoregressive
 
 As methods of machine learning evolve and improve, the spheres of natural language processing (NLP) and time series forecasting grow in popularity among researchers across a range of sciences. However, there is a knowledge gap between the two topics as simultaneous usage of NLP-related and process modeling methods is quite rare in practice.
 
-Consequently, the aim of this research work is to highlight usecases that act as intersections of NLP and time series in applied sciences. As of today, the majority of people have access to some form of media, be it social media within the realms of the Internet or news presented via television or newspapers. Thus, a valid research niche that combines the methods of NLP and process forecasting is the usage of text-based information (news and other media) as predictors for estimating future values of economical parameters. Such endeavors may give some insight into causality between the media surrounding us and the way we behave financially.
+Consequently, the aim of this research work is to highlight usecases that intersect NLP and time series forecasting in applied sciences. As of today, the majority of people have access to some form of media, be it social media within the realms of the Internet or news presented via television or newspapers. Thus, a valid research niche that combines the methods of NLP and process forecasting is the usage of text-based information (news and other media) as predictors for estimating future values of economical parameters. Such endeavors may give some insight into causality between the media surrounding us and the way we behave financially.
 
 Due to the specificity of such research, the body of this work is divided into four subsections, the first highlighting the methods of NLP that find use in processing news or similar textual data. Subsections two and three are dedicated to time series forecasting (without and with exogenous variables). Finally, the last subsection combines the knowledge described previously and answers questions, whether it is possible to use text-based information for mentioned purposes.
 
@@ -223,7 +223,7 @@ Due to the specificity of such research, the body of this work is divided into f
 
 The main goal of this part of literature review is to overview the conventional methods of topic analysis that can be used for processing news headlines and similar textual information. The methods mentioned here range from classic LDA to modern BERTopic.
 
-Topic analysis is one of the tasks of natural language processing (NLP). It consists of embedding human-legible texts into machine-readable embeddigs, dimension reduction and further clustering of the embeddings. Such clusters can be interpreted as topics found in the texts, hence the name "topic analysis". One of the classical methodologies of topic analysis is the "bag-of-words", an approach for viewing documents as unstructured vocabularies of words with different frequencies. It was the foundation for a plethora of commonly used topic analysis tools such as LDA, NMF, Top2Vec and CTM.
+Topic analysis is one of the tasks of natural language processing (NLP). It consists of embedding human-legible texts into machine-readable embeddigs, dimension reduction and further clustering of the embeddings. Such clusters can be interpreted as topics found in the texts, hence the name ``topic analysis". One of the classical methodologies of topic analysis is the ``bag-of-words", an approach for viewing documents as unstructured vocabularies of words with different frequencies. It was the foundation for a plethora of commonly used topic analysis tools such as LDA, NMF, Top2Vec and CTM.
 
 Authors of the publication \cite{onan2019two} extracted topics from scientific literature via custom two-stage pipelines. The first step in every experiment was to embed the text into machine-interpretable numeric vectors. Then in the second step different algorithms were used to cluster the vectors, validate the extracted clusters and output an array of topics.
 
@@ -294,19 +294,19 @@ JASen & \textbf{81.96} & \textbf{82.85} & \textbf{78.11} & \textbf{79.44} & \tex
 \end{tabular*}
 \end{table}
 
-In conclusion, the authors have proposed a model fine-tuned for joint aspect-sentiment extraction which outperformed earlier methods for this task.
+This way, the authors have proposed a model fine-tuned for joint aspect-sentiment extraction which outperformed earlier methods for this task.
 
 However, more often the extraction of topics is enough. In contrast to the ensemble approach proposed in the publication \cite{onan2019two}, authors of the article \cite{grootendorst2022bertopic} leverage different modified algorithms that compose BERTopic -- a modern and efficient topic analysis tool.
 
 Its defining feature is the ability to extract topics dynamically and to build topic popularity time series. This is allowed by using c-TF-IDF (class term frequency inverse document frequency) representations of topics defined by equation \ref{eq:ta4}.
 \begin{equation} \label{eq:ta4}
-\mathrm{c\_TF\_IDF} = \underbrace{\frac{n_t}{\sum\limits_{k \in \mathrm{class}} n_k}}_{\mathrm{c\_TF}} \cdot \underbrace{\log \left[ \frac{|D|}{|\{ d_i \in D | t \in d_i \}|} \right]}_{\mathrm{IDF}}
+\mathrm{c\_TF\_IDF} = \underbrace{\frac{n_t}{\sum\limits_{k \in \mathrm{class}} n_k}}_{\textrm{c-TF}} \cdot \underbrace{\log \left[ \frac{|D|}{|\{ d_i \in D | t \in d_i \}|} \right]}_{\mathrm{IDF}}
 \end{equation}
 Here c-TF is defined by the number of instances of word $t$ divided by the number of words in the class, $|D|$ - number of documents in the dataset, $|\{ d_i \in D | t \in d_i \}|$ -- number of documents in dataset, containing the word $t$. First, BERTopic is fitted on the entire dataset to create a global view of topics. Using c-TF-IDF is efficient, as IDF is computed globally and only c-TF needs to be computed at each timestep.
 
 In the publication, newly proposed BERTopic is compared to its predecessors: LDA, NMF, top2vec and CTM by means of topic coherence (TC) and topic diversity (TD) metrics on three datasets of news and twitter posts. According to the article, BERTopic has high coherence scores across all datasets. In terms of topic diversity, it is outperformed by CTM.
 
-One of the major strengths of BERTopic is that it has the capability to operate in the multilingual mode. The default embedding model "all-MiniLM-L6-v2" shows both moderately high topic coherence and diversity across all supported languages in addition to it being lightweight.
+One of the major strengths of BERTopic is that it has the capability to operate in the multilingual mode. The default embedding model ``all-MiniLM-L6-v2" shows both moderately high topic coherence and diversity across all supported languages in addition to it being lightweight.
 
 More detailed comparison of BERTopic with other methods of topic analysis is presented in the publication \cite{egger2022topic}. The authors have chosen latent Dirichlet allocation (LDA), non-negative matrix factorization (NMF), top2vec and BERTopic in the task of topic analysis on the dataset of Twitter posts.
 
@@ -321,7 +321,7 @@ In NMF all elements in those matrices are non-negative so as to be interpretable
 
 Top2vec algorithm uses word embeddings via pretrained embedding models so that semantically close words have spatially close embedding vectors. Due to the sparsity of the vector space, a dimension reduction is performed before clustering. Commonly, hierarchical density-based spatial clustering of applications with noise (HDBSCAN) is used to identify dense regions in the reduced vector space of documents. As words that appear in several documents cannot be assigned to one document, they are recognized as noise. Thus, no lemmatization is needed beforehand.
 
-BERTopic uses BERT pretrained embedders alongside with sentence-transformers for turning documents into vectors across more than 50 languages. Similarly to top2vec, BERTopic uses uniform manifold approximation and projection (UMAP) for dimension reduction and HDBSCAN for clustering. The principal difference between BERTopic and top2vec is that the latter utilizes c-TF-IDF metric instead of normal TF-IDF. Thus, importance of words in clusters and not in documents is taken into account. The usage of HDBSCAN eliminates the need for lemmatization.
+BERTopic uses BERT (bidirectional encoder representations from transformers) pretrained embedders alongside with sentence-transformers for turning documents into vectors across more than 50 languages. Similarly to top2vec, BERTopic uses uniform manifold approximation and projection (UMAP) for dimension reduction and HDBSCAN for clustering. The principal difference between BERTopic and top2vec is that the latter utilizes c-TF-IDF metric instead of normal TF-IDF. Thus, importance of words in clusters and not in documents is taken into account. The usage of HDBSCAN eliminates the need for lemmatization.
 
 Human interpretation of the extracted topics has shown that BERTopic and NMF perform the best among four tested methods. Despite that top2vec and BERTopic both use pretrained embedders for the representation of documents in vector space, many topics extracted by top2vec contained several semantic concepts or intersected each other. LDA gave the least legible results of all methods.
 
@@ -333,12 +333,12 @@ Time series forecasting is one of the most important tasks related to time-depen
 
 Among the parametric methods the following were described:
 \begin{enumerate}
-	\item Moving averages models (MA), simple models that view predicted values at a certain timestep as averages over some interval before this step. MA model is defined by the equation \ref{eq:tsp1}.
+\item \underline{Moving averages} models (MA), simple models that view predicted values at a certain timestep as averages over some interval before this step. MA model is defined by the equation \ref{eq:tsp1}.
 \begin{equation} \label{eq:tsp1}
 z_{t+1} = \frac{\sum\limits_{i=0}^{r-1}z_{t-i}}{r}
 \end{equation}
 Here, $t$ is the timestep, $z_{t+1}$ is the predicted value and $r$ is the number of observations included in the average. Such models are simple but lack quality, when data has seasonality, trend or high-frequency noise.
-\item Simple exponential smoothing models (SES) are conceptually close to MA. The main difference is that all previous timesteps are taken into account with different weights, which exponentially decrease the further away from prediction the timestep is. They are defined by the equation \ref{eq:tsp2}.
+\item \underline{Simple exponential smoothing} models (SES) are conceptually close to MA. The main difference is that all previous timesteps are taken into account with different weights, which exponentially decrease the further away from prediction the timestep is. They are defined by the equation \ref{eq:tsp2}.
 \begin{equation} \label{eq:tsp2}
 z_{t+1} = L_t = \sum_{i=0}^{t-1} \alpha (1-\alpha)^i z_{t-i}
 \end{equation}
@@ -347,7 +347,7 @@ Here $\alpha \in (0,1)$ is the weight for constant smoothing and $L_t$ is the es
 L_t = \alpha z_t + (1-\alpha) L_{t-1}
 \end{equation}
 Initially, it is supposed that $L_1 = z_1$. The main drawback of the method is the difficulty in optimizing $\alpha$ and inaccurate results when dealing with trends.
-\item Holt's exponential smoothing (HES) is an extension of SES that utilizes a second smoothing constant $\beta$ for modeling trends. HES models are defined by equations \ref{eq:tsp4}, \ref{eq:tsp5} and \ref{eq:tsp6}.
+\item \underline{Holt's exponential smoothing} (HES) is an extension of SES that utilizes a second smoothing constant $\beta$ for modeling trends. HES models are defined by equations \ref{eq:tsp4} -- \ref{eq:tsp6}.
 \begin{equation} \label{eq:tsp4}
 L_t = \alpha z_t + (1-\alpha) (L_{t-1} + T_{t-1})
 \end{equation}
@@ -358,7 +358,7 @@ T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}
 z_{t+h} = L_t + hT_t
 \end{equation}
 Here, $L$ and $T$ are the level and trend components, accordingly, and $h$ is the prediction horizon (more than 1 step as opposed to SES). Initially, $L_1 = z_1$ and $T_1 = z_2 - z_1$. As in SES method, the most difficult part is the optimization of $\alpha$ and $\beta$ constants.
-\item Holt-Winters' seasonal exponential smoothing models (HW) iterate on HES method principles and additionally deal with seasonality by adding another constant $\gamma$. More commonly used additive HW models (AHW) are defined by equations \ref{eq:tsp7}, \ref{eq:tsp8}, \ref{eq:tsp9} and \ref{eq:tsp10}.
+\item \underline{Holt-Winters' seasonal exponential smoothing} models (HW) iterate on HES method principles and additionally deal with seasonality by adding another constant $\gamma$. More commonly used additive HW models (AHW) are defined by equations \ref{eq:tsp7} -- \ref{eq:tsp10}.
 \begin{equation} \label{eq:tsp7}
 L_t = \alpha (z_t - S_{t-s}) + (1-\alpha) (L_{t-1} + T_{t-1})
 \end{equation}
@@ -383,7 +383,7 @@ and $S$ indexes are computed according to equation \ref{eq:tsp13}:
 \begin{equation} \label{eq:tsp13}
 S_i = z_i - L_s, \quad i \in [1,s]
 \end{equation}
-\item (S)ARIMA, (seasonal) autoregressive integrated moving average models provide even higher quality forecasts for stochastic time series and conceptually include three operations: autoregression AR with parameter $p$, intergration I with parameter $d$ and moving averages MA with parameter $q$. Here, integration refers to taking successive differences from the time series ($\Delta z_t = z_t - z_{t-1}$) so as to make the time series stationary, i.e. with no trend and constant deviation. ARIMA of order $(p,d,q)$ is defined by the equation \ref{eq:tsp14}.
+\item (S)ARIMA, \underline{(seasonal) autoregressive integrated moving average} models provide even higher quality forecasts for stochastic time series and conceptually include three operations: autoregression AR with parameter $p$, intergration I with parameter $d$ and moving averages MA with parameter $q$. Here, integration refers to taking successive differences from the time series ($\Delta z_t = z_t - z_{t-1}$) so as to make the time series stationary, i.e. with no trend and constant deviation. ARIMA of order $(p,d,q)$ is defined by the equation \ref{eq:tsp14}.
 \begin{equation} \label{eq:tsp14}
 I'_t = \Delta^d z_t = \delta + \sum_{i=1}^p \varphi_i I'_{t-i} + \sum_{i=1}^q \theta_i e_{t-i} + e_t
 \end{equation}
@@ -398,7 +398,7 @@ A detailed usage example of ARIMA on the COVID-19 epidemic dataset is presented 
 
 In addition, the authors gave a brief description of non-parametric methods for forecasting processes, which include the following:
 \begin{enumerate}
-	\item Artificial neural networks (ANNs) are models comprised of neurons -- objects capable of taking several inputs, combining them linearly with a certain bias and feeding the output to an activation function (often sigmoid or relu). The output of a single neuron can be described by the equation \ref{eq:tsp16}.
+	\item \underline{Artificial neural networks} (ANNs) are models comprised of neurons -- objects capable of taking several inputs, combining them linearly with a certain bias and feeding the output to an activation function (often sigmoid or relu). The output of a single neuron can be described by the equation \ref{eq:tsp16}.
 \begin{equation} \label{eq:tsp16}
 f(\mathrm{net}) = f\left( \sum_{i=1}^l w_i x_i + b \right)
 \end{equation}
@@ -406,7 +406,7 @@ Here, $x_i$ and $w_i$ are inputs and weights, $b$ is a bias and $f$ is the activ
 An example usage of multilayer feed-forward neural networks (MLFFNN) is presented in the publication \cite{khosravi2018time}. The authors showed that even such simple architecture of ANNs can produce good quality forecasts. The paper contains R-metrics (correlation coefficients between predictions and test data) for a dataset of wind speed time series for MLFFNN with values as high as 0.9995.
 In addition, the authors suggest adaptive neuro-fuzzy inference system (ANFIS) -- a method that combines ANNs with fuzzy inference system. The latter implies the usage of fuzzy-parameters (if-else rules manually trained by specialists in the research field). According to the results presented in the article, the utilization of such rules slightly improves time series prediction as opposed to MLFFNN.
 In the networks mentioned above, neuron-to-neuron signals flow only from input to output. This does not apply to recursive neural networks (RNNs), where neurons form a cycle and the signal has several flow directions. In the simple recurrent network (SRN), the state of a chosen layer within a cycle is conditioned by a context layer on its previous state. This creates short-term memory, i.e. the ability of the network to store complex signals.
-The most advanced RNNs for forecasting time series are the long short-term memory (LSTM) networks. LSTMs are described by the authors of the publication \cite{hua2019deep} as essentially RNNs tuned for learning long-term dependencies via components called "memory blocks". The latter are recurrent subnets comprised of memory cells and gates. Memory cells' role is to remember the current state of the network and the gates are in charge of controlling the flow of signal in the network. By their role, gates are classified as input (control the amount of new input data that flows into the network), output (the amount of information that flows out of the memory block) and forget gates (decide the amount of information that remains in the current cell). The layout of a memory block is presented in figure \ref{fig:gr2} (\cite{hua2019deep}).
+The most advanced RNNs for forecasting time series are the long short-term memory (LSTM) networks. LSTMs are described by the authors of the publication \cite{hua2019deep} as essentially RNNs tuned for learning long-term dependencies via components called ``memory blocks". The latter are recurrent subnets comprised of memory cells and gates. Memory cells' role is to remember the current state of the network and the gates are in charge of controlling the flow of signal in the network. By their role, gates are classified as input (control the amount of new input data that flows into the network), output (the amount of information that flows out of the memory block) and forget gates (decide the amount of information that remains in the current cell). The layout of a memory block is presented in figure \ref{fig:gr2} (\cite{hua2019deep}).
 \begin{figure}[t]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.75\textwidth]{./visuals/gr2.pdf}}
@@ -423,7 +423,7 @@ Even more structurally complicated versions of LSTMs exist. The authors of \cite
 \end{figure}
 
 It can be essentially broken down to two LSTM models, one acting as an encoder for spatial attention and the other as a decoder for temporal. The model was tested on spatio-temporal datasets of water and air quality and within the experiment it was also compared to nine commonly used baseline models including ARIMA, VAR (vector auto-regressive) and many variations of RNNs. According to the publication, on spatio-temporal data GeoMAN outperforms all baseline models, both parametric and non-parametric, judging by RMSE values. Thus, the paper \cite{liang2018geoman} proves that RNN models can be effectively engineered to perform well on spatio-temporal data.
-\item Support vector machines (SVMs) are algorithms conceptually close to ANNs but minimizing the training error while also minimizing the upper bound on the error when the model is applied to test data. The classical illustration to SVMs, binary classification, is presented in figure \ref{fig:gr4} (\cite{parmezan2019evaluation}).
+\item \underline{Support vector machines} (SVMs) are algorithms conceptually close to ANNs but minimizing the training error while also minimizing the upper bound on the error when the model is applied to test data. The classical illustration to SVMs, binary classification, is presented in figure \ref{fig:gr4} (\cite{parmezan2019evaluation}).
 \begin{figure}[h!]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.65\textwidth]{./visuals/gr4.pdf}}
@@ -433,12 +433,12 @@ It can be essentially broken down to two LSTM models, one acting as an encoder f
 
 The figure shows a set of hyperplanes dividing the two classes. An SVM seeks the optimal divider, where the highest separation margin (distance from divider to support vectors) is reached.
 As a part of a broader research, SVMs are used along other models in the publication \cite{khosravi2018time} for predicting wind speeds. It showed highly accurate predictions with $R$-statistics of up to $0.9938$, which is accurate, albeit less accurate than the other methods that comprised the research in \cite{khosravi2018time}. 
-\item $k$-nearest neighbors ($k$NN) are in nature similarity-based classification algorithms. For forecasting $z_{m+1}$ for a time series $Z = (z_1, \cdots, z_m)$ the algorithm uses last $l$ timesteps as query $Q$ and searches for $k$ most similar subsequences to $Q$ by sliding a window of size $l$ along the time series. Then, the values of $S_{l+1}^{(j)}$ are averaged in an ensemble to predict $z_{m+1}$ as depicted in equation \ref{eq:tsp17}.
+\item \underline{$k$-nearest neighbors} ($k$NN) are in nature similarity-based classification algorithms. For forecasting $z_{m+1}$ for a time series $Z = (z_1, \cdots, z_m)$ the algorithm uses last $l$ timesteps as query $Q$ and searches for $k$ most similar subsequences to $Q$ by sliding a window of size $l$ along the time series. Then, the values of $S_{l+1}^{(j)}$ are averaged in an ensemble to predict $z_{m+1}$ as depicted in equation \ref{eq:tsp17}.
 \begin{equation} \label{eq:tsp17}
 f(S) = \frac{1}{k} \sum_{j=1}^k S_{l+1}^{(j)}
 \end{equation}
 Such $k$NN models have shown the capability to model highly complex non-linear patterns, especially in form of time series prediction with invariance $k$NN ($k$NN-TSPI). The later algorithm deals with trivial matches, amplitude, offset and complexity invariance.
-\item The authors of the publication \cite{rangapuram2018deep} offered a hybrid method that combined state space models (SSMs) with deep neural networks. Principally, SSMs utilize a latent space that is used to encode time series' features: level, trend and seasonality. Linear SSMs are described by the equation \ref{eq:tsp18}.
+\item The authors of the publication \cite{rangapuram2018deep} offered a hybrid method that combined \underline{state space models} (SSMs) with deep neural networks. Principally, SSMs utilize a latent space that is used to encode time series' features: level, trend and seasonality. Linear SSMs are described by the equation \ref{eq:tsp18}.
 \begin{equation} \label{eq:tsp18}
 \mathbf{l}_t = \mathbf{F}_t\mathbf{l}_{t-1} + \mathbf{g}_t \varepsilon_t, \quad \varepsilon_t \sim \mathcal{N} (0,1)
 \end{equation}
@@ -449,12 +449,12 @@ z_t = \mathbf{a}_t^\top \mathbf{l}_{t-1} + b_t + \sigma_t \varepsilon_t, \quad \
 Here, $\mathbf{a}^\top \in \mathbb{R}^L$, $\sigma_t \in\mathbb{R}^{>0}$ and $b_t \in \mathbb{R}$ are time-varying parameters of the model.
 SSMs in general are optimized for applications where the time series are structured and this structure is well-known. The major drawback of SSMs is that multivariate analysis of several correlated time series is impossible as the model if fitted onto one process at a time. In the publication, a hybrid model is proposed, that takes advantage of the benefits of both SSMs and RNNs. The model is comprised of an RNN that is used to parametrize a particular linear SSM. RNN's parameters are learned simultaneously from the whole dataset with all additional covariates, which lets the extraction of shared patterns.
 
-This "orchestration" of several SSMs with an RNN is a complicated model architecture, which was quantitatively tested by the authors of the paper \cite{rangapuram2018deep} against more conventional baseline models such as ARIMA and DeepAR, an RNN-based method. The models were used to forecast electricity consumption and traffic occupancy rates. They were compared by the values of standard $p50$ and $p90$ quantile loss metrics. On the one hand, the majority of the tests with forecasting long-term horizons showed that the proposed hybrid method slightly outperformed the others. On the other hand, DeepAR -- RNN -- performed better at predicting a short forecast horizon.
+This ``orchestration" of several SSMs with an RNN is a complicated model architecture, which was quantitatively tested by the authors of the paper \cite{rangapuram2018deep} against more conventional baseline models such as ARIMA and DeepAR, an RNN-based method. The models were used to forecast electricity consumption and traffic occupancy rates. They were compared by the values of standard $p50$ and $p90$ quantile loss metrics. On the one hand, the majority of the tests with forecasting long-term horizons showed that the proposed hybrid method slightly outperformed the others. On the other hand, DeepAR -- RNN -- performed better at predicting a short forecast horizon.
 \end{enumerate}
 
 \subsection{Prediction with exogenous variables} \label{pwev}
 
-According to \cite{smelser2001international}, "the variables that show differences we wish to explain are called endogenous, while the variables used to explain the differences are  called exogenous". If a hypothesis exists, that the observed changes in any variable (called endogenous) are caused by changes in some other variables, the latter are referred to as exogenous.
+According to \cite{smelser2001international}, ``the variables that show differences we wish to explain are called endogenous, while the variables used to explain the differences are  called exogenous". If a hypothesis exists, that the observed changes in any variable (called endogenous) are caused by changes in some other variables, the latter are referred to as exogenous.
 
 Victor Gijsbers, the author of the publication \cite{gijsbers2021perceiving}, elaborates on the concept of causality and it being perceived. According to the paper and despite the arguments againt the Humean regularity theory that views any perception of a cause-effect pair as universal, experiencing causation leaves open the possibility that either the causality itself or its experience depend on some external events. This implies, that at least for statistical data on human behavior, which cannot be considered strongly local, the perception of causality ($a^* \to b^*$) can theoretically be generalized to ($A \to B$). Here, $a^*$ and $b^*$ denote specific local observations of random variables $A$ and $B$, while the arrow depicts causality.
 
@@ -481,7 +481,7 @@ ARIMAX is one of the most widely used models for forecasting with exogenous cont
 	\item CUBIST is rule-based forecasting algorithm that establishes regression models with certain rules based on the input data. General linear regression was used in the paper \cite{da2020forecasting}. Despite the non-linear nature of some time series, implementation of the rules mentioned above lets CUBIST fit complicated temporal patterns.
 	\item $k$NN -- $k$-nearest neighbors method described in subsection \ref{tsp} allows for exogenous variables without major modifications as the latter can be used in the $Q$-queries alongside predicted variables.
 	\item QRF -- quantile random forest is an extension of the random forest (RF) ensemble learning model. In the QRF algorithm, conditional quantiles are utilized. In contrast to conventional RF models, QRF uses full conditional distribution of the predicted variables instead of just the mean.
-	\item SVR -- support vector regression also described in \ref{tsp} similarly to $k$NN is capable of taking in exogenous variables as-is.
+	\item SVR -- support vector regression also described in subsection \ref{tsp} similarly to $k$NN is capable of taking in exogenous variables as-is.
 \end{enumerate}
 All of the models were used both with and without data preprocessing via variational mode decomposition (VMD). It decomposes a time series into a certain number of mode functions with different sparsities.
 
@@ -589,7 +589,7 @@ Less task-specific methods were used by the author of the PhD thesis \cite{jeong
 
 For time series prediction the following methods were utilized:
 \begin{itemize}
-	\item (S)ARIMA(X), (seasonal) autoregressive integrated moving averages (with exogenous predictors) -- classical time series forecasting models discussed in seubsection \ref{tsp}.
+	\item (S)ARIMA(X), (seasonal) autoregressive integrated moving averages (with exogenous predictors) -- classical time series forecasting models discussed in subsection \ref{tsp}.
 	\item Linear regression using PCA (principal component analysis), a method that performs dimension reduction and viewing the dependent variable as a linear combination of the predictors in the new latent space. 
 	\item RF (random forest method) is an ensemble learning method that consists of multiple decision trees. Every tree produces its prediction and they all are averaged for the total forecast. 
 	\item LSTM, described before.
@@ -605,7 +605,7 @@ Fortunately, in recent years more and more frameworks are developed that combine
 
 \section*{Acknowledgements}
 
-I would like to express my sincere gratitude to my supervisor Anthon Kovantsev who supported the choice of the topic and made this research possible. His assistance throughout the process of conducting this research helped it become more logically structured and helpful for the audience.
+I would like to express my sincere gratitude to my supervisor Anton Kovantsev who supported the choice of the topic and made this research possible. His assistance throughout the process of conducting this research helped it become more logically structured and helpful for the audience.
 
 I would also like to give special thanks to my family and close friends for their continuous support and understanding.
 
