@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.7.5)  9 JAN 2023 00:26
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.7.5)  9 JAN 2023 02:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -797,29 +797,20 @@ Overfull \vbox (45.712pt too high) has occurred while \output is active []
 ] [2]
 File: ./visuals/gr1.pdf Graphic file (type pdf)
 <use ./visuals/gr1.pdf>
-
-Underfull \hbox (badness 10000) detected at line 266
+ [3]
+Underfull \hbox (badness 10000) detected at line 272
 []
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) detected at line 282
+Underfull \hbox (badness 10000) detected at line 288
 []
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 1688) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3] [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
+ [4] [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
@@ -831,57 +822,142 @@ File: ./visuals/gr3.pdf Graphic file (type pdf)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Underfull \vbox (badness 1005) has occurred while \output is active []
 
  [8]
 File: ./visuals/gr4.pdf Graphic file (type pdf)
 <use ./visuals/gr4.pdf>
- [9]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
+ [9]
 Underfull \hbox (badness 10000) detected at line 464
 []
  []
 
 
+Underfull \hbox (badness 1259) in paragraph at lines 470--470
+[]\TU/txr/b/n/8 no trend, seasonality and noise
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 476--476
+\TU/txr/b/n/8 and similar short-term memory
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11] [12]
+ [10]
+Underfull \hbox (badness 10000) detected at line 493
+[]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11]
+Underfull \vbox (badness 2753) has occurred while \output is active []
+
+ [12]
+Underfull \hbox (badness 10000) detected at line 551
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--557
+[]\TU/txr/b/n/8 autoregressive,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 558--558
+[]\TU/txr/b/n/8 autoregressive,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 559--559
+[]\TU/txr/b/n/8 autoregressive,
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 559--559
+[]\TU/txr/b/n/8 may not work well with non-
+ []
+
+
+Underfull \hbox (badness 2913) in paragraph at lines 561--561
+\TU/txr/b/n/8 ture information into modeling
+ []
+
+
+Underfull \vbox (badness 4378) has occurred while \output is active []
+
+ [13] [14]
 File: ./visuals/gr5.pdf Graphic file (type pdf)
 <use ./visuals/gr5.pdf>
 
+Underfull \vbox (badness 1675) has occurred while \output is active []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13]
+ [15]
 File: ./visuals/gr6.pdf Graphic file (type pdf)
 <use ./visuals/gr6.pdf>
 
+Underfull \vbox (badness 2042) has occurred while \output is active []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ [16]
+Underfull \hbox (badness 10000) detected at line 653
+[]
+ []
 
-[14] [15] (./nir-grigoryev.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--659
+[]\TU/txr/b/n/8 autoregressive,
+ []
+
+
+Underfull \hbox (badness 6110) in paragraph at lines 662--662
+[]\TU/txr/b/n/8 complicated architecture makes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 663--663
+[]\TU/txr/b/n/8 autoregressive,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 663--663
+[]\TU/txr/b/n/8 good performance, seasonality
+ []
+
+
+Overfull \hbox (3.2322pt too wide) in alignment at lines 655--668
+[] [] [] [] []
+ []
+
+
+Underfull \vbox (badness 2221) has occurred while \output is active []
+
+ [17] (./nir-grigoryev.bbl
 Underfull \hbox (badness 1014) in paragraph at lines 56--61
 []\TU/txr/b/n/8 Grootendorst, M., 2022.  Bertopic: Neural topic modeling with a class-based tf-idf procedure.  arXiv preprint
  []
 
-[16]) [17] (./nir-grigoryev.aux)
+) [18] (./nir-grigoryev.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 11765 strings out of 476191
- 180508 string characters out of 5812073
- 497264 words of memory out of 5000000
- 32300 multiletter control sequences out of 15000+600000
+ 11768 strings out of 476191
+ 180532 string characters out of 5812073
+ 499499 words of memory out of 5000000
+ 32303 multiletter control sequences out of 15000+600000
  506148 words of font info for 146 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 70i,14n,76p,1483b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,14n,76p,1483b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nir-grigoryev.xdv (17 pages, 529528 bytes).
+Output written on nir-grigoryev.xdv (18 pages, 583996 bytes).
