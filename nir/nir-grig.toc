@@ -1,0 +1,17 @@
+\selectlanguage *{english}
+\selectlanguage *{english}
+\contentsline {section}{Introduction}{3}{section*.1}%
+\contentsline {section}{\numberline {1}Completing of the work}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Literature overview}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Topic analysis}{4}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Time series prediction}{8}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Prediction with exogenous variables}{15}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Impact of context information on consumption}{19}{subsubsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.2}Choice of methodologies}{25}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Data and experiments}{27}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Data mining, synthesis and processing}{27}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}The impact of context information on consumer behavior}{28}{subsubsection.1.3.2}%
+\contentsline {section}{\numberline {2}Findings}{32}{section.2}%
+\contentsline {section}{\numberline {3}Conclusion}{32}{section.3}%
+\contentsline {section}{Acknowledgements}{33}{section*.22}%
+\contentsline {section}{References}{35}{section*.23}%

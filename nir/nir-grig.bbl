@@ -1,0 +1,151 @@
+\begin{thebibliography}{10}
+
+\bibitem{loughran2011liability}
+Tim Loughran and Bill McDonald.
+\newblock When is a liability not a liability? textual analysis, dictionaries,
+  and 10-ks.
+\newblock {\em The Journal of finance}, 66(1):35--65, 2011.
+
+\bibitem{ding2021empirical}
+Ruhui Ding.
+\newblock Empirical evidence of lead-lag relation between the norwegian cds and
+  stock markets: Using vector autoregression with exogenous variables (varx)
+  and structured regularization for large vector autoregressions with exogenous
+  variables (varx-l) framework.
+\newblock Master's thesis, 2021.
+
+\bibitem{jeong2022predicting}
+Jaehui Jeong.
+\newblock {\em Predicting Apple Stock Price Using News Headlines and Other
+  Features With Classical Time Series Models, Supervised Models, and Machine
+  Learning Models}.
+\newblock PhD thesis, UCLA, 2022.
+
+\bibitem{onan2019two}
+Aytu{\u{g}} Onan.
+\newblock Two-stage topic extraction model for bibliometric data analysis based
+  on word embeddings and clustering.
+\newblock {\em IEEE Access}, 7:145614--145633, 2019.
+
+\bibitem{huang2020weakly}
+Jiaxin Huang, Yu~Meng, Fang Guo, Heng Ji, and Jiawei Han.
+\newblock Weakly-supervised aspect-based sentiment analysis via joint
+  aspect-sentiment topic embedding.
+\newblock {\em arXiv preprint arXiv:2010.06705}, 2020.
+
+\bibitem{grootendorst2022bertopic}
+Maarten Grootendorst.
+\newblock Bertopic: Neural topic modeling with a class-based tf-idf procedure.
+\newblock {\em arXiv preprint arXiv:2203.05794}, 2022.
+
+\bibitem{egger2022topic}
+Roman Egger and Joanne Yu.
+\newblock A topic modeling comparison between lda, nmf, top2vec, and bertopic
+  to demystify twitter posts.
+\newblock {\em Frontiers in Sociology}, 7, 2022.
+
+\bibitem{parmezan2019evaluation}
+Antonio Rafael~Sabino Parmezan, Vinicius~MA Souza, and Gustavo~EAPA Batista.
+\newblock Evaluation of statistical and machine learning models for time series
+  prediction: Identifying the state-of-the-art and the best conditions for the
+  use of each model.
+\newblock {\em Information sciences}, 484:302--337, 2019.
+
+\bibitem{benvenuto2020application}
+Domenico Benvenuto, Marta Giovanetti, Lazzaro Vassallo, Silvia Angeletti, and
+  Massimo Ciccozzi.
+\newblock Application of the arima model on the covid-2019 epidemic dataset.
+\newblock {\em Data in brief}, 29:105340, 2020.
+
+\bibitem{khosravi2018time}
+Ali Khosravi, Luiz Machado, and RO~Nunes.
+\newblock Time-series prediction of wind speed using machine learning
+  algorithms: A case study osorio wind farm, brazil.
+\newblock {\em Applied Energy}, 224:550--566, 2018.
+
+\bibitem{hua2019deep}
+Yuxiu Hua, Zhifeng Zhao, Rongpeng Li, Xianfu Chen, Zhiming Liu, and Honggang
+  Zhang.
+\newblock Deep learning with long short-term memory for time series prediction.
+\newblock {\em IEEE Communications Magazine}, 57(6):114--119, 2019.
+
+\bibitem{liang2018geoman}
+Yuxuan Liang, Songyu Ke, Junbo Zhang, Xiuwen Yi, and Yu~Zheng.
+\newblock Geoman: Multi-level attention networks for geo-sensory time series
+  prediction.
+\newblock In {\em IJCAI}, volume 2018, pages 3428--3434, 2018.
+
+\bibitem{rangapuram2018deep}
+Syama~Sundar Rangapuram, Matthias~W Seeger, Jan Gasthaus, Lorenzo Stella,
+  Yuyang Wang, and Tim Januschowski.
+\newblock Deep state space models for time series forecasting.
+\newblock {\em Advances in neural information processing systems}, 31, 2018.
+
+\bibitem{smelser2001international}
+Neil~J Smelser, Paul~B Baltes, et~al.
+\newblock {\em International encyclopedia of the social \& behavioral
+  sciences}, volume~11.
+\newblock Elsevier Amsterdam, 2001.
+
+\bibitem{gijsbers2021perceiving}
+Victor Gijsbers.
+\newblock Perceiving causation and causal singularism.
+\newblock {\em Synthese}, 199(5):14881--14895, 2021.
+
+\bibitem{verma2022arima}
+URMIL VERMA et~al.
+\newblock Arima and arimax models for sugarcane yield forecasting in northern
+  agro-climatic zone of haryana.
+\newblock {\em Journal of Agrometeorology}, 24(2):200--202, 2022.
+
+\bibitem{da2020forecasting}
+Ramon~Gomes Da~Silva, Matheus Henrique Dal~Molin Ribeiro, Viviana~Cocco
+  Mariani, and Leandro dos Santos~Coelho.
+\newblock Forecasting brazilian and american covid-19 cases based on artificial
+  intelligence coupled with climatic exogenous variables.
+\newblock {\em Chaos, Solitons \& Fractals}, 139:110027, 2020.
+
+\bibitem{li2022nonlinear}
+Junzhuo Li, Wenyong Li, and Guan Lian.
+\newblock A nonlinear autoregressive model with exogenous variables for traffic
+  flow forecasting in smaller urban regions.
+\newblock {\em Promet}, 34(6):943--957, 2022.
+
+\bibitem{kamins1997consumer}
+Michael~A Kamins, Valerie~S Folkes, and Lars Perner.
+\newblock Consumer responses to rumors: Good news, bad news.
+\newblock {\em Journal of consumer psychology}, 6(2):165--187, 1997.
+
+\bibitem{sago2014impact}
+Brad Sago and Craig Hinnenkamp.
+\newblock The impact of significant negative news on consumer behavior towards
+  favorite brands.
+\newblock {\em Global Journal of Business Research}, 8(1):65--72, 2014.
+
+\bibitem{mao2011predicting}
+Huina Mao, Scott Counts, and Johan Bollen.
+\newblock Predicting financial markets: Comparing survey, news, twitter and
+  search engine data.
+\newblock {\em arXiv preprint arXiv:1112.1051}, 2011.
+
+\bibitem{vargas2017deep}
+Manuel~R Vargas, Beatriz~SLP De~Lima, and Alexandre~G Evsukoff.
+\newblock Deep learning for stock market prediction from financial news
+  articles.
+\newblock In {\em 2017 IEEE international conference on computational
+  intelligence and virtual environments for measurement systems and
+  applications (CIVEMSA)}, pages 60--65. IEEE, 2017.
+
+\bibitem{lamon2017cryptocurrency}
+Connor Lamon, Eric Nielsen, and Eric Redondo.
+\newblock Cryptocurrency price prediction using news and social media
+  sentiment.
+\newblock {\em SMU Data Sci. Rev}, 1(3):1--22, 2017.
+
+\bibitem{li2022novel}
+Jianping Li, Guowen Li, Mingxi Liu, Xiaoqian Zhu, and Lu~Wei.
+\newblock A novel text-based framework for forecasting agricultural futures
+  using massive online news headlines.
+\newblock {\em International Journal of Forecasting}, 38(1):35--50, 2022.
+
+\end{thebibliography}
