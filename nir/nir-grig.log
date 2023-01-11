@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.7.5)  9 JAN 2023 21:05
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.7.5)  11 JAN 2023 15:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -902,23 +902,13 @@ File: ./visuals/gr1.pdf Graphic file (type pdf)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5]
-Overfull \hbox (16.80003pt too wide) in alignment at lines 194--204
-[] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (16.80003pt too wide) in alignment at lines 210--220
-[] [] [] [] [] [] [] [] [] 
- []
-
-[6] [7] [8]
-Underfull \hbox (badness 4543) in paragraph at lines 287--288
+[5] [6] [7] [8]
+Underfull \hbox (badness 4543) in paragraph at lines 293--294
 []$[]$ \TU/TimesNewRoman(0)/m/n/13 models (HW) iterate on HES method
  []
 
 [9]
-Underfull \hbox (badness 4279) in paragraph at lines 312--313
+Underfull \hbox (badness 4279) in paragraph at lines 318--319
 []\TU/TimesNewRoman(0)/m/n/13 (S)ARIMA, $[]$ models provide even
  []
 
@@ -930,216 +920,220 @@ File: ./visuals/gr3.pdf Graphic file (type pdf)
  [11] [12]
 File: ./visuals/gr4.pdf Graphic file (type pdf)
 <use ./visuals/gr4.pdf>
- [13]
-Overfull \hbox (1.91324pt too wide) in paragraph at lines 367--368
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13]
+Overfull \hbox (1.91324pt too wide) in paragraph at lines 373--374
 []\TU/TimesNewRoman(0)/m/n/13 The authors of the publication [[]] offered a hybrid method that combined $[]$
  []
 
 [14]
-Overfull \hbox (0.83278pt too wide) in paragraph at lines 404--404
+Overfull \hbox (0.83278pt too wide) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 References| 
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 404--404
+Underfull \hbox (badness 1496) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 no trend, seasonality and
  []
 
 
-Underfull \hbox (badness 4846) in paragraph at lines 404--404
+Underfull \hbox (badness 4846) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 efficient recurrent imple-
  []
 
 
-Underfull \hbox (badness 5417) in paragraph at lines 404--404
+Underfull \hbox (badness 5417) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 can be outperformed by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 \TU/TimesNewRoman(0)/m/n/13 and even some feed-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 \TU/TimesNewRoman(0)/m/n/13 forward networks such
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 \TU/TimesNewRoman(0)/m/n/13 as MLFFNN, complex
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 404--404
+Underfull \hbox (badness 2435) in paragraph at lines 410--410
 \TU/TimesNewRoman(0)/m/n/13 non-linear pattern model-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 \TU/TimesNewRoman(0)/m/n/13 especially architecturally
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 [[]], [[]],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 limited scope of usage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 \TU/TimesNewRoman(0)/m/n/13 down to regression or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 simple implementation,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 \TU/TimesNewRoman(0)/m/n/13 effectiveness, ability to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 predictions can be dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--404
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\TU/TimesNewRoman(0)/m/n/13 gets outperformed by
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 404--404
+Underfull \hbox (badness 4492) in paragraph at lines 410--410
 \TU/TimesNewRoman(0)/m/n/13 conventional methods on
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[15] [16] [17] [18]
-Overfull \hbox (7.1982pt too wide) in paragraph at lines 494--494
+[15] [16] [17]
+Overfull \hbox (7.1982pt too wide) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 autoregressive,
  []
 
 
-Overfull \hbox (7.1982pt too wide) in paragraph at lines 494--494
+Overfull \hbox (7.1982pt too wide) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 autoregressive,
  []
 
 
-Overfull \hbox (7.1982pt too wide) in paragraph at lines 494--494
+Overfull \hbox (7.1982pt too wide) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 autoregressive,
  []
 
 
-Underfull \hbox (badness 3229) in paragraph at lines 494--494
+Underfull \hbox (badness 3229) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 models non-linear pat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
 \TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 good performance,
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 494--494
+Underfull \hbox (badness 2521) in paragraph at lines 500--500
 \TU/TimesNewRoman(0)/m/n/13 inclusion of future in-
  []
 
 
-Underfull \hbox (badness 3229) in paragraph at lines 494--494
+Underfull \hbox (badness 3229) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 as all RNNs, requires
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 similarity-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
 \TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
 \TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 494--494
+Underfull \hbox (badness 2512) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 good performance, us-
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 494--494
+Underfull \hbox (badness 1838) in paragraph at lines 500--500
 \TU/TimesNewRoman(0)/m/n/13 age of full conditional
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 494--494
+Underfull \hbox (badness 1052) in paragraph at lines 500--500
 \TU/TimesNewRoman(0)/m/n/13 distribution of the pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
 \TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 494--494
+Underfull \hbox (badness 1286) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 limited scope of usage
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 494--494
+Underfull \hbox (badness 1824) in paragraph at lines 500--500
 \TU/TimesNewRoman(0)/m/n/13 (tasks have to be nar-
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 494--494
+Underfull \hbox (badness 1057) in paragraph at lines 500--500
 \TU/TimesNewRoman(0)/m/n/13 rowed down to regres-
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 494--494
+Underfull \hbox (badness 1215) in paragraph at lines 500--500
 []|\TU/TimesNewRoman(0)/m/n/13 can model complicated
  []
 
-[19]
-Underfull \hbox (badness 1087) in paragraph at lines 509--510
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18] [19]
+Underfull \hbox (badness 1087) in paragraph at lines 515--516
 []\TU/TimesNewRoman(0)/m/n/13 The authors of [[]] utilized simple procedures of sentiment extraction from news
  []
 
@@ -1147,107 +1141,100 @@ Underfull \hbox (badness 1087) in paragraph at lines 509--510
 File: ./visuals/gr5.pdf Graphic file (type pdf)
 <use ./visuals/gr5.pdf>
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 1342) in paragraph at lines 539--541
+Underfull \hbox (badness 1342) in paragraph at lines 545--547
 []\TU/TimesNewRoman(0)/m/n/13 A more contemporary method for processing textual information and using it for
  []
 
+[21]
 File: ./visuals/gr6.pdf Graphic file (type pdf)
 <use ./visuals/gr6.pdf>
-[21]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[22] [23]
-Overfull \hbox (7.1982pt too wide) in paragraph at lines 597--597
+ [22] [23]
+Overfull \hbox (7.1982pt too wide) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 autoregressive,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 \TU/TimesNewRoman(0)/m/n/13 mance for predictable
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 \TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 complicated architec-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 Tokenizer,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 \TU/TimesNewRoman(0)/m/n/13 vectorizer,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 \TU/TimesNewRoman(0)/m/n/13 logistic
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 597--597
+Underfull \hbox (badness 3930) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 problems with anoma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 exceptional perfor-
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 597--597
+Underfull \hbox (badness 1769) in paragraph at lines 603--603
 \TU/TimesNewRoman(0)/m/n/13 mance, effective usage
  []
 
 
-Overfull \hbox (3.04811pt too wide) in paragraph at lines 597--597
+Overfull \hbox (3.04811pt too wide) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 SARIMAX| 
  []
 
 
-Overfull \hbox (7.1982pt too wide) in paragraph at lines 597--597
+Overfull \hbox (7.1982pt too wide) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 autoregressive,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 LR with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 2050) in paragraph at lines 597--597
+Underfull \hbox (badness 2050) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 good performance, en-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 \TU/TimesNewRoman(0)/m/n/13 non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--597
+Underfull \hbox (badness 10000) in paragraph at lines 603--603
 []|\TU/TimesNewRoman(0)/m/n/13 excellent performance,
  []
 
@@ -1255,7 +1242,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 597--597
 File: ./visuals/gr7.png Graphic file (type bmp)
 <./visuals/gr7.png>
  [25]
-Underfull \hbox (badness 5970) in paragraph at lines 620--621
+Underfull \hbox (badness 5970) in paragraph at lines 626--627
 []\TU/TimesNewRoman(0)/m/n/13 BERT-embedders based on transformers – models tuned for extracting semantic
  []
 
@@ -1276,27 +1263,27 @@ File: ./visuals/gr12.png Graphic file (type bmp)
 File: ./visuals/gr13.png Graphic file (type bmp)
 <./visuals/gr13.png>
  [30]
-Underfull \hbox (badness 10000) in paragraph at lines 741--741
+Underfull \hbox (badness 10000) in paragraph at lines 747--747
 []|\TU/TimesNewRoman(0)/b/n/13 Mortgage rates, sec.
  []
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 741--741
+Underfull \hbox (badness 1184) in paragraph at lines 747--747
 []|\TU/TimesNewRoman(0)/b/n/13 Real estate affordabil-
  []
 
 
-Overfull \hbox (9.96457pt too wide) in alignment at lines 741--741
+Overfull \hbox (9.96457pt too wide) in alignment at lines 747--747
 [] [] [] [] [] [] [] 
  []
 
 [31]
-Underfull \hbox (badness 1019) in paragraph at lines 752--753
+Underfull \hbox (badness 1019) in paragraph at lines 758--759
 \TU/TimesNewRoman(0)/m/n/13 contextual information and modeled consumer behavior. However, not all categories of
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 752--753
+Underfull \hbox (badness 1097) in paragraph at lines 758--759
 \TU/TimesNewRoman(0)/m/n/13 consumption were able to yield high prediction accuracy, leading to the conclusion that
  []
 
@@ -1371,10 +1358,10 @@ Package rerunfilecheck Info: File `nir-grig.out' has not changed.
 Here is how much of TeX's memory you used:
  20428 strings out of 476191
  392334 string characters out of 5812073
- 893981 words of memory out of 5000000
+ 893204 words of memory out of 5000000
  40821 multiletter control sequences out of 15000+600000
  475260 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,12n,117p,1480b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,12n,117p,1480b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nir-grig.xdv (35 pages, 730300 bytes).
+Output written on nir-grig.xdv (35 pages, 732636 bytes).

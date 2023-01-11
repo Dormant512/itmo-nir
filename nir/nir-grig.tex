@@ -163,7 +163,7 @@ The authors have compared 43 different configurations of topic analysis pipeline
 JC = \frac{a}{a+b+c}
 \end{equation}
 \begin{equation} \label{eq:ta2}
-FM = \left( \frac{a}{a+b} \cdot \frac{a}{a+c} \right)^{0.5}
+FM = \sqrt{ \frac{a}{a+b} \cdot \frac{a}{a+c} }
 \end{equation}
 \begin{equation} \label{eq:ta3}
 F1 = \frac{2a^2}{2a^2 + ac + ab}
@@ -178,7 +178,7 @@ Even better results were shown by the proposed clustering ensemble framework whi
 \begin{figure}[!h]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.75\textwidth]{./visuals/gr1.pdf}}
-\caption{Jaccard Coefficient metric for different combinations of embedding and clustering methods.}
+	\caption{Jaccard Coefficient metric for different combinations of embedding and clustering methods (from \cite{onan2019two}).}
 \label{fig:gr1}
 \end{figure}
 
@@ -189,12 +189,14 @@ For this finesse task a two-step procedure called JASen was developed. It consis
 The results shown by the JASen model were compared with those of previously developed approaches. Values of aspect identification and sentiment polarity classification are presented in the tables \ref{tab:t1} and \ref{tab:t2} below (\cite{huang2020weakly}).
 
 \begin{table}[h]
-\caption{Quantitative evaluation on aspect identification (\%).}
+\centering
+\caption{Quantitative evaluation on aspect identification, \% (from \cite{huang2020weakly}).}
 \label{tab:t1}
+\resizebox{0.8\columnwidth}{!}{
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}lllllllll@{}}
 \toprule
 \multirow{2}{*}{Methods} & \multicolumn{4}{c}{Restaurants}          & \multicolumn{4}{c}{Laptops}              \\ 
-                         & Accuracy & Precision & Recall & macro-F1 & Accuracy & Precision & Recall & macro-F1 \\
+                         & Accuracy & Precision & Recall & F1 & Accuracy & Precision & Recall & F1 \\
 \colrule
 CosSim & 61.43 & 50.12 & 50.26 & 42.31 & 53.84 & 58.79 & 54.64 & 52.18 \\
 W2VLDA & 70.75 & 58.82 & 57.44 & 51.40 & 64.94 & 67.78 & 65.79 & 63.44 \\
@@ -202,15 +204,18 @@ BERT & 72.98 & 58.20 & \textbf{74.63} & 55.72 & 67.52 & 68.26 & 67.29 & 65.45 \\
 JASen & \textbf{83.83} & \textbf{64.73} & 72.95 & \textbf{66.28} & \textbf{71.01} & \textbf{69.55} & \textbf{71.31} & \textbf{69.69} \\
 \botrule
 \end{tabular*}
+}
 \end{table}
 
 \begin{table}[h]
-\caption{Quantitative evaluation on sentiment polarity classification (\%).}
+\centering
+\caption{Quantitative evaluation on sentiment polarity classification, \% (from \cite{huang2020weakly}).}
 \label{tab:t2}
+\resizebox{0.8\columnwidth}{!}{
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}lllllllll@{}}
 \toprule
 \multirow{2}{*}{Methods} & \multicolumn{4}{c}{Restaurants}          & \multicolumn{4}{c}{Laptops}              \\ 
-                         & Accuracy & Precision & Recall & macro-F1 & Accuracy & Precision & Recall & macro-F1 \\
+                         & Accuracy & Precision & Recall & F1 & Accuracy & Precision & Recall & F1 \\
 \colrule
 CosSim & 70.14 & 74.72 & 61.26 & 59.89 & 68.73 & 69.91 & 68.95 & 68.41 \\
 W2VLDA & 74.32 & 75.66 & 70.52 & 67.23 & 71.06 & 71.62 & 71.37 & 71.22 \\
@@ -218,6 +223,7 @@ BERT & 77.48 & 77.62 & 73.95 & 73.82 & 69.71 & 70.10 & 70.26 & 70.08 \\
 JASen & \textbf{81.96} & \textbf{82.85} & \textbf{78.11} & \textbf{79.44} & \textbf{74.59} & \textbf{74.69} & \textbf{74.65} & \textbf{74.59} \\
 \botrule
 \end{tabular*}
+}
 \end{table}
 
 This way, the authors have proposed a model fine-tuned for joint aspect-sentiment extraction which outperformed earlier methods for this task.
@@ -336,7 +342,7 @@ The most advanced RNNs for forecasting time series are the long short-term memor
 \begin{figure}[t]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.75\textwidth]{./visuals/gr2.pdf}}
-\caption{An illustration of LSTM memory block.}
+	\caption{An illustration of LSTM memory block (from \cite{hua2019deep}).}
 \label{fig:gr2}
 \end{figure}
 It is first decided, which old information stays in the cell, then new information is chosen to be stored. Updating of the cell state is performed by multiplying the old memory state by the forget gate output. Then the element-wise product of the input gate and the candidate values for the new information is added. This procedure lets LSTMs predict time-series with long-term dependencies. Several architectures of LSTM models exist that differ by how the neurons in each memory block are connected. As opposed to fully-connected neurons in the traditional LSTM, they are randomly connected in randomly connected LSTMs (RCLSTM), proposed by the authors of the paper \cite{hua2019deep}. This architecture more closely resembles real synapses in the human brain, which was one of the reasons for the proposal. The authors tested RCLSTM on several datasets including a dataset of traffic information. The influence of the percentage of connected neurons on the predictive quality was estimated my comparison of RMSE metrics. RCLSTM took less computational resources than standard LSTM, however seemed to be outperformed by it. Taking the above into account, RCLSTM still showed better predictions than commonly used methods such as SVR (support vector machines), ARIMA and FFNN (feed-forward neural networks). This implies that random connection of neurons within LSTMs lets significantly reduce computing time while slightly compromising quality.
@@ -344,7 +350,7 @@ Even more structurally complicated versions of LSTMs exist. The authors of \cite
 \begin{figure}[h!]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.7\textwidth]{./visuals/gr3.pdf}}
-\caption{The framework of GeoMAN.}
+	\caption{The framework of GeoMAN (from \cite{liang2018geoman}).}
 \label{fig:gr3}
 \end{figure}
 
@@ -353,7 +359,7 @@ It can be essentially broken down to two LSTM models, one acting as an encoder f
 \begin{figure}[h!]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.65\textwidth]{./visuals/gr4.pdf}}
-\caption{Binary classification using support vector machines.}
+	\caption{Binary classification using support vector machines (from \cite{parmezan2019evaluation}).}
 \label{fig:gr4}
 \end{figure}
 
@@ -414,7 +420,7 @@ Thus, if the chosen exogenous variables either cause the changes in the predicte
 
 \begin{table}[!h]
 \centering
-\caption{Comparative view in terms of RMSEs of sugarcane yield forecasts based on ARIMA and ARIMAX models.}
+\caption{Comparative view in terms of RMSEs of sugarcane yield forecasts based on ARIMA and ARIMAX models (from \cite{verma2022arima}).}
 \label{tab:t4}
 \resizebox{0.8\columnwidth}{!}{
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}lll@{}}
@@ -526,11 +532,11 @@ The authors of the publication \cite{vargas2017deep} went a step further via usi
 	\item Output layer is simply a fully-connected softmax activated layer followed by a layer that solves the task of binary classification: $[1,0]$ for stock price increase and $[0,1]$ for decrease. 
 \end{enumerate}
 
-Schematic layout of the RCNN model is presented in figure \ref{fig:gr5}. 
+Schematic layout of the RCNN model is presented in figure \ref{fig:gr5} (\cite{vargas2017deep}). 
 \begin{figure}[h!]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.6\textwidth]{./visuals/gr5.pdf}}
-\caption{Architecture of the RCNN model.}
+	\caption{Architecture of the RCNN model (from \cite{vargas2017deep}).}
 \label{fig:gr5}
 \end{figure}
 
@@ -544,11 +550,11 @@ A more contemporary method for processing textual information and using it for f
 \end{itemize}
 According to the published results, the models extracted general trends for price growth over the examined time period well, however predictions of daily price changes were quite inaccurate. Specifically, predicting fluctuations going against the general trend was a problem. Nonetheless, most of the predictions were correct, which implies the ability of non-technical data such as news to be used as predictors for financial variables.
 
-As the next step in developing a working forecasting model powered by news headlines, the authors of the article \cite{li2022novel} have proposed a framework tuned for this task. The designed text-based framework (TBF) takes full advantage of the textual input data and predicts agricultural futures such as soybean prices. The structure of TBF is depicted in figure \ref{fig:gr6}.
+As the next step in developing a working forecasting model powered by news headlines, the authors of the article \cite{li2022novel} have proposed a framework tuned for this task. The designed text-based framework (TBF) takes full advantage of the textual input data and predicts agricultural futures such as soybean prices. The structure of TBF is depicted in figure \ref{fig:gr6} (\cite{li2022novel}).
 \begin{figure}[h!]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.8\textwidth]{./visuals/gr6.pdf}}
-\caption{Structure of the text-based framework.}
+	\caption{Structure of the text-based framework (from \cite{li2022novel}).}
 \label{fig:gr6}
 \end{figure}
 

@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {1.1}Literature overview}{3}{subsection.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.1}Topic analysis}{4}{subsubsection.1.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.2}Time series prediction}{8}{subsubsection.1.1.2}%
-\contentsline {subsubsection}{\numberline {1.1.3}Prediction with exogenous variables}{15}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.3}Prediction with exogenous variables}{16}{subsubsection.1.1.3}%
 \contentsline {subsubsection}{\numberline {1.1.4}Impact of context information on consumption}{19}{subsubsection.1.1.4}%
 \contentsline {subsection}{\numberline {1.2}Choice of methodologies}{25}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Data and experiments}{27}{subsection.1.3}%
