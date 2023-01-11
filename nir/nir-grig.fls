@@ -1086,6 +1086,12 @@ INPUT ./visuals/gr12.png
 INPUT ./visuals/gr13.png
 INPUT ./visuals/gr13.png
 INPUT ./visuals/gr13.png
+INPUT ./visuals/gr12.png
+INPUT ./visuals/gr12.png
+INPUT ./visuals/gr12.png
+INPUT ./visuals/gr13.png
+INPUT ./visuals/gr13.png
+INPUT ./visuals/gr13.png
 INPUT ./nir-grig.bbl
 INPUT nir-grig.bbl
 INPUT ./nir-grig.bbl

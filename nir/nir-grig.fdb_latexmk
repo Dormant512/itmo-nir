@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex nir-grig"] 1673440962 "nir-grig.aux" "nir-grig.bbl" "nir-grig" 1673440966
+["bibtex nir-grig"] 1673444214 "nir-grig.aux" "nir-grig.bbl" "nir-grig" 1673444219
   "./nir-bib.bib" 1673183820 7222 63485a430f69bdcf1f5d9575b2d30fa3 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "nir-grig.aux" 1673440963 15379 f6a3c301704a8c4188350573ace7fdeb "xelatex"
+  "nir-grig.aux" 1673444215 15625 f35ed6c72293d504c95a8cf2010e6159 "xelatex"
   (generated)
   "nir-grig.bbl"
   "nir-grig.blg"
-["xdvipdfmx"] 1673440963 "nir-grig.xdv" "nir-grig.pdf" "nir-grig" 1673440966
-  "nir-grig.xdv" 1673440963 732636 3a6369ce8e3b98c23b1f3c1e595186a6 "xelatex"
+["xdvipdfmx"] 1673444215 "nir-grig.xdv" "nir-grig.pdf" "nir-grig" 1673444219
+  "nir-grig.xdv" 1673444215 733116 d786191e9cdc898ee6690f1cd7017687 "xelatex"
   (generated)
   "nir-grig.pdf"
-["xelatex"] 1673440962 "nir-grig.tex" "nir-grig.xdv" "nir-grig" 1673440966
+["xelatex"] 1673444214 "nir-grig.tex" "nir-grig.xdv" "nir-grig" 1673444219
   "/etc/texmf/web2c/texmf.cnf" 1657043991 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/dormant/.texlive2021/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm" 1662587279 3240 c2435f2b5cd66d4930bc29b8df87967e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -139,11 +139,11 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1657044025 5133317 b28db23c83b1f49accf679467937b7fe ""
-  "nir-grig.aux" 1673440963 15379 f6a3c301704a8c4188350573ace7fdeb "xelatex"
-  "nir-grig.bbl" 1673440962 6043 2688267e7e68d99a0850922755fc6ac0 "bibtex nir-grig"
-  "nir-grig.out" 1673440963 2662 df2cf3ce84817d070d7285b6b98bea91 "xelatex"
-  "nir-grig.tex" 1673440959 77166 3b381118f0fb51cc600010a94321b086 ""
-  "nir-grig.toc" 1673440963 1360 e4cb0436a7109209380e0fccdedf7159 "xelatex"
+  "nir-grig.aux" 1673444215 15625 f35ed6c72293d504c95a8cf2010e6159 "xelatex"
+  "nir-grig.bbl" 1673444214 6043 2688267e7e68d99a0850922755fc6ac0 "bibtex nir-grig"
+  "nir-grig.out" 1673444215 2536 22c520b00e183a9ef83d8d4df9de4656 "xelatex"
+  "nir-grig.tex" 1673444212 77992 f3057174c14737f0166933cc415d703c ""
+  "nir-grig.toc" 1673444215 1300 655384025ea3353f7e71b823c314e0dd "xelatex"
   "visuals/gr1.pdf" 1673183820 140847 89d33b02a5c062954f0b08e7211e4573 ""
   "visuals/gr10.png" 1671555125 484590 b11f1188160371bf7cd3a624b4a5289b ""
   "visuals/gr11.png" 1671555125 254398 d43bd5f415a9208332e337d15e9bc679 ""

@@ -609,7 +609,7 @@ LSTM & RNN, \newline non-parametric & excellent performance, ability to model co
 
 Based on the overview of related scientific work, BERTopic was chosen as the method for processing textual news information for its exceptional performance and stability across several languages and ARIMAX was chosen for forecasting consumer time series for its simplicity and efficiency.
 
-For synthesizing categorized time series of financial transactions, an autoencoder capable of extending real datasets with synthetic time series was proposed. It was developed in such a way that the statistical parameters of the resulting dataset are identical to those of the initial one. The autoencoder consists of three dense hidden layers of sizes 64, 32 and 64, accordingly. The model takes a 2D-array of real world temporal data and outputs it as another 2D-array but with the number of time series chosen by the user. The structure of the model is described in figure \ref{fig:gr7}.
+As transactional datasets are often confidential and publication of the raw data is restricted, synthetic datasets offer identical consumption distributions without showing any of the initial clients. For synthesizing categorized time series of financial transactions, an autoencoder capable of extending real datasets with synthetic time series was proposed. It was developed in such a way that the statistical parameters of the resulting dataset are identical to those of the initial one. The autoencoder consists of three dense hidden layers of sizes 64, 32 and 64, accordingly. The model takes a 2D-array of real world temporal data and outputs it as another 2D-array but with the number of time series chosen by the user. The structure of the model is described in figure \ref{fig:gr7}.
 \begin{figure}[h!]\vspace*{4pt}
 %\centerline{\includegraphics{fx1}\hspace*{5mm}\includegraphics{fx1}}
 	\centerline{\includegraphics[width=0.8\textwidth]{./visuals/gr7.png}}
@@ -676,7 +676,12 @@ The sources depicted in figure \ref{fig:gr9} contained the following data:
 
 It was hypothesized that consumer behavior forecasting can serve as a method for studying the influence of context on consumption. In fact, to study the patterns in stochastic processes, either the analysis of the statistical characteristics of the time series or models capable of predicting them are utilized. The latter approach is more illustrative, and at the same time more applied to real world tasks, as the assessment of future changes in processes is useful in any business. Thus, analyzing the impact of context composition on the quality of predictive models is effectively equivalent to examining the impact of context on consumer activity itself. 
 
-ARIMAX autoregressive models were used as a time series prediction tool. It should be noted that time series trends without the seasonal term were used for fitting the models. Seasonal decomposition was performed using the statsmodels library of the Python3 language. Then, as additional preprocessing measures, the time range of the datasets was narrowed from 2020/01/01-2020/09/30 to 2020/04/01-2020/09/30. This is due to the non-stationarity of the time series during the first three months of 2020.
+ARIMAX autoregressive models were used as a time series prediction tool. It should be noted that:
+\begin{itemize}
+	\item Individual client series were summed to form a dataset of 14 series where each one represents daily spendings of the whole population of clients on one of the 14 categories.
+	\item Time series trends without the seasonal term were used for fitting the models. Seasonal decomposition was performed using the statsmodels library of the Python3 language.
+\end{itemize}
+Then, as additional preprocessing measures, the time range of the datasets was narrowed from 2020/01/01-2020/09/30 to 2020/04/01-2020/09/30. This is due to the non-stationarity of the time series during the first three months of 2020.
 
 The results of this and subsequent experiments were ensured to be representative by carrying out each prediction 10 times, with different partitioning of the data into training and test subsets. In this paper, the starting date of the training dataset is 2020/04/01, and the starting dates of the test series range from 2020/09/10 up to 2020/09/20. The end date of the test series is 2020/09/30. The error metrics were averaged over these 10 attempts. 
 
@@ -718,7 +723,9 @@ Thus, the addition of exogenous variables to the ARIMAX model also can significa
 
 In addition to predicting transactional time series, the maximum absolute values of the Pearson cross-correlation and the corresponding time lags in days were calculated. The values of the shifts and cross-correlation are shown in table \ref{tab:t7}. The cells corresponding to the best topics on which the models were built are highlighted in bold.
 
-\begin{table}[h]
+The most interesting cases are those where the absolute values of Pearson cross-correlation are high and the corresponding time lags have low values. For example, spendings on category ``travel" (which include public transport) and news about COVID-19 are negatively correlated with a lag of 3 weeks, which means that people are less likely to use means of public transport soon after they hear news about the pandemic.
+
+\begin{table}[!h]
 \centering
 \caption{Pearson cross-correlation between consumption and exogenous predictors.}
 \label{tab:t7}
@@ -747,13 +754,18 @@ In addition to predicting transactional time series, the maximum absolute values
 }
 \end{table}
 
-The most interesting cases are those where the absolute values of Pearson cross-correlation are high and the corresponding time lags have low values. For example, spendings on category ``travel" (which include public transport) and news about COVID-19 are negatively correlated with a lag of 3 weeks, which means that people are less likely to use means of public transport soon after they hear news about the pandemic.
+\clearpage
 
 \section{Findings} \label{f}
 
 As part of this research, methods for mining and processing news headlines and other contextual information were developed and implemented in Python3. In addition, a method for synthesizing transactional data based on real-world data was proposed. 
 
-Consumer activity of was modeled using ARIMAX autoregressive models. The best prediction quality is achieved by careful selection of the context variables on which the model is fit. The predictive ability of the model, depending on the consumption category, can be improved both by reducing the number of exogenous variables and by adding new ones. 
+Consumer activity of was modeled using ARIMAX autoregressive models. The best prediction quality is achieved by careful selection of the context variables on which the model is fit. The predictive ability of the model, depending on the consumption category, can be improved both by reducing the number of exogenous variables and by adding new ones. As a result, highly accurate forecasts can be acquired, as illustrated in figure \ref{fig:gr14}.
+\begin{figure}[h!]\vspace*{4pt}
+	\centerline{\includegraphics[width=0.49\textwidth]{./visuals/gr12.png}\hspace{1mm}\includegraphics[width=0.49\textwidth]{./visuals/gr13.png}}
+\caption{Consumption forecasts with limited context (left) and extended context (right).}
+\label{fig:gr14}
+\end{figure}
 
 Thus, it is shown that the use of contextual information can improve the prediction accuracy of transactional time series. Consequently, there is some causal relationship between contextual information and modeled consumer behavior. However, not all categories of consumption were able to yield high prediction accuracy, leading to the conclusion that consumption in some categories is not causally related to the contextual information considered.
 
@@ -765,10 +777,10 @@ During the internship, the Individual task was fully completed, which is depicte
 
 \newpage
 
-\section*{Acknowledgements}
-\addcontentsline{toc}{section}{Acknowledgements}
+%\section*{Acknowledgements}
+%\addcontentsline{toc}{section}{Acknowledgements}
 
-I would like to express my sincere gratitude to my supervisor Anton Kovantsev who supported the choice of the topic and made this research possible. His assistance throughout the process of conducting this research helped it become more logically structured and helpful for the audience. I would also like to give special thanks to my family and close friends for their continuous support and understanding.
+%I would like to express my sincere gratitude to my supervisor Anton Kovantsev who supported the choice of the topic and made this research possible. His assistance throughout the process of conducting this research helped it become more logically structured and helpful for the audience. I would also like to give special thanks to my family and close friends for their continuous support and understanding.
 
 \bibliography{./nir-bib.bib}{}
 \addcontentsline{toc}{section}{References}

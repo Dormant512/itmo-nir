@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.7.5)  11 JAN 2023 15:42
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.7.5)  11 JAN 2023 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1257,37 +1257,51 @@ File: ./visuals/gr10.png Graphic file (type bmp)
 <./visuals/gr10.png>
 File: ./visuals/gr11.png Graphic file (type bmp)
 <./visuals/gr11.png>
- [29]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: ./visuals/gr12.png Graphic file (type bmp)
 <./visuals/gr12.png>
+[29]
 File: ./visuals/gr13.png Graphic file (type bmp)
 <./visuals/gr13.png>
  [30]
-Underfull \hbox (badness 10000) in paragraph at lines 747--747
+Underfull \hbox (badness 10000) in paragraph at lines 754--754
 []|\TU/TimesNewRoman(0)/b/n/13 Mortgage rates, sec.
  []
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 747--747
+Underfull \hbox (badness 1184) in paragraph at lines 754--754
 []|\TU/TimesNewRoman(0)/b/n/13 Real estate affordabil-
  []
 
 
-Overfull \hbox (9.96457pt too wide) in alignment at lines 747--747
+Overfull \hbox (9.96457pt too wide) in alignment at lines 754--754
 [] [] [] [] [] [] [] 
  []
 
-[31]
-Underfull \hbox (badness 1019) in paragraph at lines 758--759
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[31] [32]
+File: ./visuals/gr12.png Graphic file (type bmp)
+<./visuals/gr12.png>
+File: ./visuals/gr13.png Graphic file (type bmp)
+<./visuals/gr13.png>
+
+Underfull \hbox (badness 1019) in paragraph at lines 770--771
 \TU/TimesNewRoman(0)/m/n/13 contextual information and modeled consumer behavior. However, not all categories of
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 758--759
+Underfull \hbox (badness 1097) in paragraph at lines 770--771
 \TU/TimesNewRoman(0)/m/n/13 consumption were able to yield high prediction accuracy, leading to the conclusion that
  []
 
-[32] (./nir-grig.bbl
+[33
+
+] (./nir-grig.bbl
 Underfull \hbox (badness 1924) in paragraph at lines 10--16
 []\TU/TimesNewRoman(0)/m/n/13 Ruhui Ding.  Empirical evidence of lead-lag relation between the norwegian cds
  []
@@ -1297,7 +1311,7 @@ Underfull \hbox (badness 1117) in paragraph at lines 48--53
 []\TU/TimesNewRoman(0)/m/n/13 Antonio Rafael Sabino Parmezan, Vinicius MA Souza, and Gustavo EAPA Batista.
  []
 
-[33] [34]
+[34]
 Underfull \hbox (badness 1052) in paragraph at lines 146--150
 []\TU/TimesNewRoman(0)/m/n/13 Jianping Li, Guowen Li, Mingxi Liu, Xiaoqian Zhu, and Lu Wei.  A novel text-
  []
@@ -1337,7 +1351,7 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [35] (./nir-grig.aux
+ [35] [36] (./nir-grig.aux
 LaTeX Info: Redefining \rmfamily on input line 23.
 LaTeX Info: Redefining \sffamily on input line 23.
 LaTeX Info: Redefining \ttfamily on input line 23.
@@ -1353,15 +1367,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `nir-grig.out' has not changed.
-(rerunfilecheck)             Checksum: DF2CF3CE84817D070D7285B6B98BEA91;2662.
+(rerunfilecheck)             Checksum: 22C520B00E183A9EF83D8D4DF9DE4656;2536.
  ) 
 Here is how much of TeX's memory you used:
- 20428 strings out of 476191
- 392334 string characters out of 5812073
- 893204 words of memory out of 5000000
- 40821 multiletter control sequences out of 15000+600000
+ 20429 strings out of 476191
+ 392344 string characters out of 5812073
+ 893317 words of memory out of 5000000
+ 40822 multiletter control sequences out of 15000+600000
  475260 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,12n,117p,1480b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nir-grig.xdv (35 pages, 732636 bytes).
+Output written on nir-grig.xdv (36 pages, 733116 bytes).
