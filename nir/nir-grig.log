@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.7.5)  11 JAN 2023 16:36
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.6.9)  19 JUN 2023 11:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -86,9 +86,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language77). Reported on input line 105.
+(babel)             (\language11). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language77). Reported on input line 108.
+(babel)             (\language11). Reported on input line 108.
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel-russian/russianb.ldf
 File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
 Language: russian 2020/09/09 1.3k Russian support for the Babel system
@@ -1290,18 +1290,18 @@ File: ./visuals/gr12.png Graphic file (type bmp)
 File: ./visuals/gr13.png Graphic file (type bmp)
 <./visuals/gr13.png>
 
-Underfull \hbox (badness 1019) in paragraph at lines 770--771
+Underfull \hbox (badness 1019) in paragraph at lines 782--783
 \TU/TimesNewRoman(0)/m/n/13 contextual information and modeled consumer behavior. However, not all categories of
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 770--771
+Underfull \hbox (badness 1097) in paragraph at lines 782--783
 \TU/TimesNewRoman(0)/m/n/13 consumption were able to yield high prediction accuracy, leading to the conclusion that
  []
 
 [33
 
-] (./nir-grig.bbl
+] [34] (./nir-grig.bbl
 Underfull \hbox (badness 1924) in paragraph at lines 10--16
 []\TU/TimesNewRoman(0)/m/n/13 Ruhui Ding.  Empirical evidence of lead-lag relation between the norwegian cds
  []
@@ -1311,7 +1311,7 @@ Underfull \hbox (badness 1117) in paragraph at lines 48--53
 []\TU/TimesNewRoman(0)/m/n/13 Antonio Rafael Sabino Parmezan, Vinicius MA Souza, and Gustavo EAPA Batista.
  []
 
-[34]
+[35]
 Underfull \hbox (badness 1052) in paragraph at lines 146--150
 []\TU/TimesNewRoman(0)/m/n/13 Jianping Li, Guowen Li, Mingxi Liu, Xiaoqian Zhu, and Lu Wei.  A novel text-
  []
@@ -1351,7 +1351,7 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [35] [36] (./nir-grig.aux
+ [36] [37] (./nir-grig.aux
 LaTeX Info: Redefining \rmfamily on input line 23.
 LaTeX Info: Redefining \sffamily on input line 23.
 LaTeX Info: Redefining \ttfamily on input line 23.
@@ -1372,10 +1372,10 @@ Package rerunfilecheck Info: File `nir-grig.out' has not changed.
 Here is how much of TeX's memory you used:
  20429 strings out of 476191
  392344 string characters out of 5812073
- 893317 words of memory out of 5000000
+ 895319 words of memory out of 5000000
  40822 multiletter control sequences out of 15000+600000
  475260 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,12n,117p,1480b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nir-grig.xdv (36 pages, 733116 bytes).
+Output written on nir-grig.xdv (37 pages, 749940 bytes).

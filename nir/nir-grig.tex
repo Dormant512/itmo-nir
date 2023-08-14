@@ -754,6 +754,18 @@ The most interesting cases are those where the absolute values of Pearson cross-
 }
 \end{table}
 
+\newpage
+
+All of the choices of the context predictors in the previous experiments were made manually by analyzing the values of RRMSE of forecasts on individual predictors. Thus, the \textit{fourth experiment} was aimed to automate the choice of context. The simplest strategy of choosing optimal context information is to automatically run predictions on all of the topics and pick top $N$ of those topics.
+
+Automatic predictions on top-5 optimal topics (this time, including only news) yielded mixed results with values of RRMSE randing from 2.2 up to almost 20\%. This may imply two reasons:
+\begin{itemize}
+	\item suboptimal strategy of picking context;
+	\item high dependency of autoregressive models on the stationarity of the time series.
+\end{itemize}
+
+The first potential reason was addressed by picking top-2 predictors and then adding all other predictors with individual forecast RRMSE values under $M$\%. The \textit{fifth experiment} was conducted by changing the context choice strategy according to the description above. The experiment was conducted with topics of less than 6\% individual RRMSE but not less than 2 topics in total. It yielded almost no changes in the forecasting quality in comparison with the last experiment. As autoregressive models perform well only on stationary fragments of time series, models other than ARIMAX have to be taken into account. The next step in this research work is to implement an oscillator model capable of detecting non-stationary behaviors in time series via exogenous predictors.
+
 \clearpage
 
 \section{Findings} \label{f}
@@ -769,7 +781,9 @@ Consumer activity of was modeled using ARIMAX autoregressive models. The best pr
 
 Thus, it is shown that the use of contextual information can improve the prediction accuracy of transactional time series. Consequently, there is some causal relationship between contextual information and modeled consumer behavior. However, not all categories of consumption were able to yield high prediction accuracy, leading to the conclusion that consumption in some categories is not causally related to the contextual information considered.
 
-In addition, the cross-correlation of context and consumer time series with a time shift can be used to confirm or refuse hypotheses about the causal relationship between context and consumption. For example, a strong correlation with relatively small shifts can provide clues about the consumer's direct response to the changing context. 
+In addition, the cross-correlation of context and consumer time series with a time shift can be used to confirm or refuse hypotheses about the causal relationship between context and consumption. For example, a strong correlation with relatively small shifts can provide clues about the consumer's direct response to the changing context.
+
+Context picking was automated and experiments on various time series (stationary and non-stationary) proved that autoregresive models do not always perform successfully even with exogenous context.
 
 \section{Conclusion}
 
